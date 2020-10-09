@@ -1,0 +1,416 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Connect195</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo"><a href="{% url 'home' %}">Connect195</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="{% static 'assets/img/logo.png' %}" alt="" class="img-fluid"></a> -->
+
+      <nav class="nav-menu d-none d-lg-block">
+
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+
+          <li class="drop-down"><a href="#">About</a>
+            <ul>
+              <li><a href="{% url 'about' %}">About Us</a></li>
+              <li><a href="{% url 'team' %}">Team</a></li>
+            </ul>
+          </li>
+          <li class="drop-down"><a href="#">Connect Centers</a>
+            <ul>
+              <li class="drop-down"><a href="#">India</a>
+                <ul>
+                  <li><a href="#">Banglore</a></li>
+                  <li><a href="#">Delhi</a></li>
+                  <li class="drop-down">
+                    <a href="#">Gurugram</a>
+                    <ul>
+                      <li><a href="{% url 'gurugram' %}">Gurugram Udyog Vihar</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Hyderabad</a></li>
+                  <li><a href="#">Mumbai</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="active"><a href="{% url 'services' %}">Services</a></li>
+          <li><a href="{% url 'blog' %}">Insights</a></li>
+          <li><a href="{% url 'pricing' %}">Pricing</a></li>
+          <li><a href="{% url 'events' %}">Events</a></li>
+
+        </ul>
+
+      </nav><!-- .nav-menu -->
+
+      <a href="{% url 'home' %}" class="get-started-btn ml-auto">Get Started</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Services</h2>
+          <ol>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li>Services</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="icon-box">
+              <i class="icofont-computer"></i>
+              <h4><a href="#">GET YOUR BUSINESS ONLINE</a></h4>
+              <p>Our team of expert help you to build website and mobile application to reach more customers.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="icofont-chart-bar-graph"></i>
+              <h4><a href="#">ADVICE YOU ON HOW TO START YOUR BUSINESS</a></h4>
+              <p>We help that how to start your business. Provide all kind of basic support to starting a business. Our expert start helping you from basic steps.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="icofont-calculator"></i>
+              <h4><a href="#">ACCOUNTING & COMPLIANCE</a></h4>
+              <p>We provide professional support to complete all kind of accounting and compliance's work. Our connected CA firms support entrepreneurs all over India.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="icofont-lawyer"></i>
+              <h4><a href="#">LEGAL ADVISORY</a></h4>
+              <p>We help you to get free legal advisory with a team of corporate lawyers.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="icofont-tasks"></i>
+              <h4><a href="#">TRAINING & WORKSHOPS</a></h4>
+              <p>we help entrepreneur and their team to grow, we provide training to all of them.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="icofont-money"></i>
+              <h4><a href="#">IPO CONSULTANCY</a></h4>
+              <p>Provide consultancy to Company to launch their IPO. help them to raise funding.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Frequently Asked Questions?</h2>
+          <p>Answer to all your <span style="color:#d9232d">Questions</span></p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-toggle="tab" href="#tab-1">Free Trial</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tab-2">REDEEMABLE CREDITS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tab-3">SUBSCRIPTION PLAN</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tab-4">SERVICES/AMENITIES</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <p>
+                      <h5><span>1.</span>How does the free trial work?</h5>
+                      <span>
+                        With a free trial, we give you an opportunity to experience working in a 
+                        co-working space/cafe for an entire day across any of our 150+ locations.
+                      </span>
+                    </p>
+                    <p>
+                      <h5><span>2.</span> do I get on my free day trial?</h5>
+                      <span>
+                        Your free trial includes access to free wifi, stationery and printing facilities.
+                        You also get exclusive discounts, offers and cashbacks on your food bill at our work cafes.
+                      </span>
+                    </p>
+                    <p>
+                      <h5><span>3.</span> How do I register for a free trial?</h5>
+                      <span>
+                        Just click on the ‘Free Trial Button’ on the website or download the myHQ App and register for a free trial.
+                      </span>
+                    </p>
+                    <p>
+                      <h5><span>4.</span> On my free trial, can I go to any myHQ space?</h5>
+                      <span>
+                        You can take a trial out of any of our spaces spread across 150+ locations in Delhi NCR.
+                        Take your pick between a myriad of choices; co-working or work cafe, get your best fit!
+                      </span>
+                    </p>
+                    <p>
+                      <h5><span>5.</span> Can I avail the ‘Free Trial’ more than once?</h5>
+                      <span>
+                        Sorry, you can avail a free trial only once. However, our subscription plans are super economical and flexible.
+                        So go ahead and pick your best fit without burning a hole in your pocket! :)
+                      </span>
+                    </p>
+                    <p>
+                      <h5><span>6.</span> Do I need to enter my credit card details to avail a free trial?</h5>
+                      <span>
+                        You don't require to enter your credit card details to book your free day trial.
+                        We only need to enter your contact details!
+                      </span>
+                    </p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/features-1.png' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <p>
+                      <h5><span>1.</span>What are redeemable credits?</h5>
+                      <span>
+                        Once you buy a subscription, we add the specified redeemable credits to your account.
+                        These can then be used to pay for your food and beverage expense at work cafes or
+                        for your visits to coworking spaces
+                      </span>
+                    </p>
+                    <p>
+                      <h5><span>2.</span>How do I pay for my visits to coworking spaces?</h5>
+                      <span>
+                        Everytime you visit a coworking spaces the Credits will get auto-deducted 
+                        from your account on a per visit basis
+                      </span>
+                    </p>
+                    <p>
+                      <h5><span>3.</span>Can I use cash/card to pay for my food expenses at coworking spaces?</h5>
+                      <span>
+                        Yes, you can buy anythingh from coworking cafes.
+                      </span>
+                    </p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/features-2.png' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <p>
+                      <h5><span>1.</span>How long is my subscription valid for?</h5>
+                      <span>
+                        subscriptions plans are valid for 1 year from the date of purchase
+                      </span>
+                    </p>
+                    <p>
+                      <h5><span>2.</span>Can a subscription be used by multiple users?</h5>
+                      <span>
+                        Sorry, each subscription can be used by a single user only. If you are looking for a team based plan,
+                        please reach out to us on +99713-7447.
+                      </span>
+                    </p>
+                    <p>
+                      <h5><span>3.</span>Are there subscription plans available for longer durations?</h5>
+                      <span>
+                        Absolutely Yes! Please Call Us at +99713-7447 for more information.
+                      </span>
+                    </p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/features-3.png' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-4">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <p>
+                      <h5><span>1.</span>What are the working hours? When are spaces open?</h5>
+                      <span>
+                        Generally all our spaces are available from 9am - 8pm, Monday through Sunday.
+                        However, each co-working space has a different operating time which is mentioned on the detail page on the website and mobile app.
+                      </span>
+                    </p>
+                    <p>
+                      <h5><span>2.</span>Can a subscription be used by multiple users?</h5>
+                      <span>
+                        Each space is equipped with all work essentials to ensure a seamless work experience.
+                        Get high speed unlimited wifi, office stationery, comfortable seats, free printing etc.
+                      </span>
+                    </p>
+                    <p>
+                      <h5><span>3.</span>Can I bring guests along with me?</h5>
+                      <span>
+                        Yes, Just make sure you register them by requesting support. 
+                        At a work cafe, guests are free to visit for a day.
+                        At a co-working space you would be required to buy a day pass for your guest.
+                      </span>
+                    </p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/features-4.png' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>Connect195</h3>
+              <p>
+                <strong>Address:</strong> HBF CONNECT,<br>H 11, H Block,<br> Sector 63, Noida,<br> Uttar Pradesh 20130<br>
+                <strong>Phone:</strong> 099713 37447<br>
+                <strong>Email:</strong> info@example.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contact' %}">Contact</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'services' %}">FAQs</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Free Support</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+  
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Locations</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Banglore</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Delhi</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'gurugram' %}">Gurugram</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Hyderabad</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Mumbai</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p></p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright 2020 - <strong><span>Connect195</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href=#>Enorvision</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
