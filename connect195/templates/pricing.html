@@ -28,23 +28,6 @@
 
   <!-- Template Main CSS File -->
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
-  <script>
-    function myFunction() {
-      x = document.getElementById("myText").innerText;
-      localStorage.setItem("price",x);
-      return false;
-    }
-    function myFunction1() {
-      y = document.getElementById("myText1").innerText;
-      localStorage.setItem("price",y);
-      return false;
-    }
-    function myFunction2() {
-      z = document.getElementById("myText2").innerText;
-      localStorage.setItem("price",z);
-      return false;
-    }
-  </script>
 
 </head>
 
@@ -62,13 +45,7 @@
 
         <ul>
           <li><a href="{% url 'home' %}">Home</a></li>
-
-          <li class="drop-down"><a href="#">About</a>
-            <ul>
-              <li><a href="{% url 'about' %}">About Us</a></li>
-              <li><a href="{% url 'team' %}">Team</a></li>
-            </ul>
-          </li>
+          <li><a href="{% url 'about' %}">About Us</a></li>
           <li class="drop-down"><a href="#">Connect Centers</a>
             <ul>
               <li class="drop-down"><a href="#">India</a>
@@ -107,14 +84,6 @@
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
 
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Pricing</h2>
-          <ol>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li>Pricing</li>
-          </ol>
-        </div>
-
       </div>
     </section><!-- End Breadcrumbs -->
 
@@ -126,51 +95,86 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="box">
-              <h3>Free Trial</h3>
-              <h4><sup>&#8377;</sup><span id="myText">0</span><span>/ month</span></h4>
+              <h3 style="color:#d9232d">Silver</h3>
               <ul>
-                <li>Access to Work Space</li>
-                <li>Desk</li>
-                <li>Printer</li>
-                <li>Cafe Access</li>
-                <li class="na">No Credits</li>
+                <li>HBF board Promotions free (1 post per month)</li>
+                <li>Company Incorporation</li>
+                <li>Limited License  & Registration</li>
+                <li>Event Subscriptions</li>
+                <li>Fundraising Approach</li>
+                <li>CRM Lead management</li>
+                <li>Customer Lead request</li>
+                <li>HRM Attendance Management</li>
+                <li>Leave management</li>
+                <li>Task Management</li>
+                <li>Accounting Software</li>
+                <li>One Admin – 5 Employees</li>
+                <li>Legal Quick 4 Agreement</li>
+                <li>One informative call free for 15 mins</li>
+                <li>Data 2 GB</li>
+                <li>Expert advice on sachi advice platform</li>
               </ul>
               <div class="btn-wrap">
-                <a href="{% url 'checkout' %}" class="btn-buy" onclick="myFunction()">Buy Now</a>
+                <a href="{% url 'checkout' %}" class="btn-buy" >Buy Now</a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
-            <div class="box featured">
-              <h3>Yearly</h3>
-              <h4><sup>&#8377;</sup><span id="myText1">25000</span><span> / month</span></h4>
+            <div class="box featured" style="border-style: solid;">
+              <h3>Platinum</h3>
+
               <ul>
-                <li>Access to Work Space</li>
-                <li>Desk</li>
-                <li>Printer</li>
-                <li>Cafe Access</li>
-                <li class="na">No Credits</li>
+                <li>HBF board Promotions free (1 post per Day)</li>
+                <li>Company Incorporation</li>
+                <li>Licence Incorporation</li>
+                <li>Event Subscription</li>
+                <li>Fundraising Approach</li>
+                <li>Full CRM Support (2gb Data) (100 user)</li>
+                <li>HRM Full access</li>
+                <li>Accounting Software – Sale Purchase, Expense bill scan copy</li>
+                <li>Informative Website</li>
+                <li>12 agreement per year Verify Legal (Report submission chargeable)</li>
+                <li>HBF board Promotions free (1 post per Day)</li>
+                <li>Quick doc free</li>
+                <li>Customised 5 agreement</li>
+                <li>Unlimited Admin – 100 Employees</li>
+                <li>ESI PF</li>
+                <li>1 hr free time for call centre</li>
+                <li>One free visit Quarterly</li>
+                <li>Expert Call 3meetings per months (3 hr)</li>
+                <li>Software changes available cost to cost</li>
+                <li>Expert advice on sachi advice platform</li>
+                <li>Free call access</li>
               </ul>
               <div class="btn-wrap">
-                <a href="{% url 'checkout' %}" class="btn-buy" onclick="myFunction1()">Buy Now</a>
+                <a href="{% url 'checkout' %}" class="btn-buy">Buy Now</a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
             <div class="box">
-              <h3>Monthly</h3>
-              <h4><sup>&#8377;</sup><span id="myText2">50000</span><span> / month</span></h4>
+              <h3 style="color:#d9232d">Gold</h3>
               <ul>
-                <li>Access to Work Space</li>
-                <li>Desk</li>
-                <li>Printer</li>
-                <li>Cafe Access</li>
-                <li class="na">No Credits</li>
+                <li>HBF board Promotions free (1 post per Day)</li>
+                <li>Company Incorporation</li>
+                <li>License Incorporation</li>
+                <li>Event Subscriptions</li>
+                <li>Fundraising Approach</li>
+                <li>Full CRM Support (2gb Data) (100 user)</li>
+                <li>HRM Full access</li>
+                <li>Accounting Software – Sale Purchase, Expense bill scan copy</li>
+                <li>Informative Website</li>
+                <li>Three Admin – 100 Employees</li>
+                <li>ESI PF</li>
+                <li>Quick legal docs free 10 agreement</li>
+                <li>1 hr free time for call Centre</li>
+                <li>Expert Call cost accordingly Software changes available on cost to cost</li>
+                <li>Expert advice on sachi advice platform</li>
               </ul>
               <div class="btn-wrap">
-                <a href="{% url 'checkout' %}" class="btn-buy" onclick="myFunction2()">Buy Now</a>
+                <a href="{% url 'checkout' %}" class="btn-buy">Buy Now</a>
               </div>
             </div>
           </div>
@@ -243,9 +247,6 @@
     <div class="container">
       <div class="copyright">
         &copy; Copyright 2020 - <strong><span>Connect195</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        Designed by <a href=#>Enorvision</a>
       </div>
     </div>
   </footer><!-- End Footer -->

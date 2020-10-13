@@ -45,13 +45,7 @@
 
         <ul>
           <li><a href="{% url 'home' %}">Home</a></li>
-
-          <li class="drop-down"><a href="#">About</a>
-            <ul>
-              <li><a href="{% url 'about' %}">About Us</a></li>
-              <li><a href="{% url 'team' %}">Team</a></li>
-            </ul>
-          </li>
+          <li><a href="{% url 'about' %}">About Us</a></li>
           <li class="drop-down"><a href="#">Connect Centers</a>
             <ul>
               <li class="drop-down"><a href="#">India</a>
@@ -90,61 +84,77 @@
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
 
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Services</h2>
-          <ol>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li>Services</li>
-          </ol>
-        </div>
-
       </div>
     </section><!-- End Breadcrumbs -->
-
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
       <div class="container">
+        <div class="section-title">
+          <p>Our Free Services With<span style="color:#d9232d;"> Membership</span></p>
+        </div>
+
         <div class="row">
           <div class="col-md-6">
             <div class="icon-box">
-              <i class="icofont-computer"></i>
-              <h4><a href="#">GET YOUR BUSINESS ONLINE</a></h4>
-              <p>Our team of expert help you to build website and mobile application to reach more customers.</p>
+              <i><img src="{% static 'assets/img/services/compliance.png' %}"></i>
+              <h4><a href="#">FREE COMPANY COMPLIANCE'S</a></h4>
+              <p>We support our incubate to file all yearly complaince of<br/> firm/ LLP/ private limited /Limited company.</p>
             </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box">
-              <i class="icofont-chart-bar-graph"></i>
-              <h4><a href="#">ADVICE YOU ON HOW TO START YOUR BUSINESS</a></h4>
-              <p>We help that how to start your business. Provide all kind of basic support to starting a business. Our expert start helping you from basic steps.</p>
+              <i><img src="{% static 'assets/img/services/company.png' %}"></i>
+              <h4><a href="#">FREE COMPANY INCORPORATION</a></h4>
+              <p>We support our incubate to registered a company to his/her business. Incubate does not have to pay any Professional fee.</p>
             </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box">
-              <i class="icofont-calculator"></i>
-              <h4><a href="#">ACCOUNTING & COMPLIANCE</a></h4>
-              <p>We provide professional support to complete all kind of accounting and compliance's work. Our connected CA firms support entrepreneurs all over India.</p>
+              <i><img src="{% static 'assets/img/services/gst.png' %}"></i>
+              <h4><a href="#">FREE GST FILING</a></h4>
+              <p>We support our incubate entrepreneurs to file monthly GST Filing support via our Connect ERP Software.</p>
             </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box">
-              <i class="icofont-lawyer"></i>
-              <h4><a href="#">LEGAL ADVISORY</a></h4>
-              <p>We help you to get free legal advisory with a team of corporate lawyers.</p>
+              <i><img src="{% static 'assets/img/services/lawyer.png' %}"></i>
+              <h4><a href="#">FREE LEGAL SUPPORT</a></h4>
+              <p>We support our incubate entrepreneurs to legal support and pre ready agreement</p>
             </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box">
-              <i class="icofont-tasks"></i>
-              <h4><a href="#">TRAINING & WORKSHOPS</a></h4>
-              <p>we help entrepreneur and their team to grow, we provide training to all of them.</p>
+              <i><img src="{% static 'assets/img/services/crm.png' %}"></i>
+              <h4><a href="#">SALES CRM</a></h4>
+              <p>Support with free Sales CRM So that our incubate can track record and leads.</p>
             </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box">
-              <i class="icofont-money"></i>
-              <h4><a href="#">IPO CONSULTANCY</a></h4>
-              <p>Provide consultancy to Company to launch their IPO. help them to raise funding.</p>
+              <i><img src="{% static 'assets/img/services/hr.png' %}"></i>
+              <h4><a href="#">VIRTUAL HR SERVICES</a></h4>
+              <p>We Provide Support to our incubate Startup & SME Virtual HR Services.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i><img src="{% static 'assets/img/services/profits.png' %}"></i>
+              <h4><a href="#">FUNDRAISING ADVISORY</a></h4>
+              <p>We support our Incubate to give fundraising advisory, Help them to approach Investors.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i><img src="{% static 'assets/img/services/social.png' %}"></i>
+              <h4><a href="#">BUSINESS NETWORKING</a></h4>
+              <p>We help our incubate to connect with other entrepreneurs & Investors. So they can promote their business in our connect community</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i><img src="{% static 'assets/img/services/ipo.png' %}"></i>
+              <h4><a href="#">ROADMAP TO IPO</a></h4>
+              <p>We are help our incubate Startup & SME to develop Roadmap for Startup IPO & SME IPO.</p>
             </div>
           </div>
         </div>
@@ -155,176 +165,112 @@
     <!-- ======= Features Section ======= -->
     <section id="features" class="features">
       <div class="container">
-
         <div class="section-title">
-          <h2>Frequently Asked Questions?</h2>
-          <p>Answer to all your <span style="color:#d9232d">Questions</span></p>
+          <p>Our Process & <span style="color:#d9232d">Premium Services</span></p>
         </div>
-
+        <div class="row content">
+          <div class="col-md-6">
+            <ul>
+              <li><i class="ri-check-double-line"></i> <h4 class="right">SOP Development </h4></li>
+              <li><i class="ri-check-double-line"></i> <h4 class="left">People Management </h4></li>
+              <li><i class="ri-check-double-line"></i> <h4 class="right">Market Research </h4></li>
+              <li><i class="ri-check-double-line"></i> <h4 class="left">Make your business Global </h4></li>
+              <li><i class="ri-check-double-line"></i> <h4 class="right">Investor Road Show </h4></li>
+              <li><i class="ri-check-double-line"></i> <h4 class="left">Internal & External Audit </h4></li>
+              <li><i class="ri-check-double-line"></i> <h4 class="right">IT Audit </h4></li>
+              <li><i class="ri-check-double-line"></i> <h4 class="left">Training & Workshops </h4></li>
+              <li><i class="ri-check-double-line"></i> <h4 class="right">Reputation Management </h4></li>
+              <li><i class="ri-check-double-line"></i> <h4 class="left">Intellectual property </h4></li>
+              <li><i class="ri-check-double-line"></i> <h4 class="right">OKR Development </h4></li>
+              <li><i class="ri-check-double-line"></i> <h4 class="left"> Business Automation </h4></li>
+            </ul>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <ul>
+              <div class="icon-box">
+                <li class="left">
+                  <i><img src="{% static 'assets/img/services/planning.png' %}"></i> 
+                  <h4>Planing</h4>
+                  <p>Planning for Company Growth or launch a New Project/Product.</p>
+                </li>
+                <li class="right"> 
+                  <i><img src="{% static 'assets/img/services/organization.png' %}"></i> 
+                  <h4>Organization</h4>
+                  <p>Organization OKR & Supporting Advisory Board.</p>
+                </li>
+                <li class="left">
+                  <i><img src="{% static 'assets/img/services/planning.png' %}"></i> 
+                  <h4>Management</h4>
+                  <p>Building a Management team and Policies for them.</p>
+                </li>
+                <li class="right">
+                  <i><img src="{% static 'assets/img/services/planning.png' %}"></i> 
+                  <h4>Support</h4>
+                  <p>Provide support and help them outsource process to right companies.</p>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======= End Section ======= -->
+    <section id="End-section" class="End-section">
+      <div class="container">
         <div class="row">
-          <div class="col-lg-3">
-            <ul class="nav nav-tabs flex-column">
-              <li class="nav-item">
-                <a class="nav-link active show" data-toggle="tab" href="#tab-1">Free Trial</a>
+          <div class="col-md-6">
+            <h3>ECOSYSTEMS</h3>
+            <h4>Building thriving startup ecosystems: </h4>
+            <p>
+              As one of the world's largest incubators, we plan to expand our global presence outside funding. 
+              We are dedicated to creating collaborative technology communities worldwide through our collaborations with corporate, 
+              founders, governments and foundations. We have 50 + development and acceleration initiatives to create regional economies, 
+              funding over 1,500 start-ups across 15 nations, and partnering with more than 100 companies through training, 
+              advantages, and alliances for creativity.
+            </p>
+            <h3>VC & ANGEL INVESTOR CONNECT</h3>
+            <p>
+              Our VC Connect services incorporate real-world interactions and action-based drills to further 
+              fine-tune and adapt their investing plans to existing and potential investors.Join other up-and - coming investors 
+              and learn from our partners about the 100 rule book, screen live startup pitches, discuss peer agreements 
+              and negotiate with 500 business units in hands-on master classes.
+            </p>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <ul>
+              <li>
+                <h4>Corporate Innovation</h4>
+                <p>
+                  Startups hold the key to the growth and the technological advances. 
+                  Our strength is to stay ahead of the game and support our clients identify and invest in the brightest.
+                </p>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#tab-2">REDEEMABLE CREDITS</a>
+              <li>
+                <h4>Founder Program</h4>
+                <p>
+                  250 Entrepreneurs have run 50 + development and acceleration initiatives 
+                  that fund more than 1,500 companies in 15 countries. Providing business preparation to meet their objectives.
+                </p>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#tab-3">SUBSCRIPTION PLAN</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#tab-4">SERVICES/AMENITIES</a>
+              <li>
+                <h4>Govt & Foundation</h4>
+                <p>
+                  By tailored accelerators, bootcamps and trade initiatives, we help boost national economies,
+                  which in effect recruit and preserve expertise, capital and accelerate creativity.
+                </p>
               </li>
             </ul>
           </div>
-          <div class="col-lg-9 mt-4 mt-lg-0">
-            <div class="tab-content">
-              <div class="tab-pane active show" id="tab-1">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <p>
-                      <h5><span>1.</span>How does the free trial work?</h5>
-                      <span>
-                        With a free trial, we give you an opportunity to experience working in a 
-                        co-working space/cafe for an entire day across any of our 150+ locations.
-                      </span>
-                    </p>
-                    <p>
-                      <h5><span>2.</span> do I get on my free day trial?</h5>
-                      <span>
-                        Your free trial includes access to free wifi, stationery and printing facilities.
-                        You also get exclusive discounts, offers and cashbacks on your food bill at our work cafes.
-                      </span>
-                    </p>
-                    <p>
-                      <h5><span>3.</span> How do I register for a free trial?</h5>
-                      <span>
-                        Just click on the ‘Free Trial Button’ on the website or download the myHQ App and register for a free trial.
-                      </span>
-                    </p>
-                    <p>
-                      <h5><span>4.</span> On my free trial, can I go to any myHQ space?</h5>
-                      <span>
-                        You can take a trial out of any of our spaces spread across 150+ locations in Delhi NCR.
-                        Take your pick between a myriad of choices; co-working or work cafe, get your best fit!
-                      </span>
-                    </p>
-                    <p>
-                      <h5><span>5.</span> Can I avail the ‘Free Trial’ more than once?</h5>
-                      <span>
-                        Sorry, you can avail a free trial only once. However, our subscription plans are super economical and flexible.
-                        So go ahead and pick your best fit without burning a hole in your pocket! :)
-                      </span>
-                    </p>
-                    <p>
-                      <h5><span>6.</span> Do I need to enter my credit card details to avail a free trial?</h5>
-                      <span>
-                        You don't require to enter your credit card details to book your free day trial.
-                        We only need to enter your contact details!
-                      </span>
-                    </p>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="{% static 'assets/img/features-1.png' %}" alt="" class="img-fluid">
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane" id="tab-2">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <p>
-                      <h5><span>1.</span>What are redeemable credits?</h5>
-                      <span>
-                        Once you buy a subscription, we add the specified redeemable credits to your account.
-                        These can then be used to pay for your food and beverage expense at work cafes or
-                        for your visits to coworking spaces
-                      </span>
-                    </p>
-                    <p>
-                      <h5><span>2.</span>How do I pay for my visits to coworking spaces?</h5>
-                      <span>
-                        Everytime you visit a coworking spaces the Credits will get auto-deducted 
-                        from your account on a per visit basis
-                      </span>
-                    </p>
-                    <p>
-                      <h5><span>3.</span>Can I use cash/card to pay for my food expenses at coworking spaces?</h5>
-                      <span>
-                        Yes, you can buy anythingh from coworking cafes.
-                      </span>
-                    </p>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="{% static 'assets/img/features-2.png' %}" alt="" class="img-fluid">
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane" id="tab-3">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <p>
-                      <h5><span>1.</span>How long is my subscription valid for?</h5>
-                      <span>
-                        subscriptions plans are valid for 1 year from the date of purchase
-                      </span>
-                    </p>
-                    <p>
-                      <h5><span>2.</span>Can a subscription be used by multiple users?</h5>
-                      <span>
-                        Sorry, each subscription can be used by a single user only. If you are looking for a team based plan,
-                        please reach out to us on +99713-7447.
-                      </span>
-                    </p>
-                    <p>
-                      <h5><span>3.</span>Are there subscription plans available for longer durations?</h5>
-                      <span>
-                        Absolutely Yes! Please Call Us at +99713-7447 for more information.
-                      </span>
-                    </p>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="{% static 'assets/img/features-3.png' %}" alt="" class="img-fluid">
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane" id="tab-4">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <p>
-                      <h5><span>1.</span>What are the working hours? When are spaces open?</h5>
-                      <span>
-                        Generally all our spaces are available from 9am - 8pm, Monday through Sunday.
-                        However, each co-working space has a different operating time which is mentioned on the detail page on the website and mobile app.
-                      </span>
-                    </p>
-                    <p>
-                      <h5><span>2.</span>Can a subscription be used by multiple users?</h5>
-                      <span>
-                        Each space is equipped with all work essentials to ensure a seamless work experience.
-                        Get high speed unlimited wifi, office stationery, comfortable seats, free printing etc.
-                      </span>
-                    </p>
-                    <p>
-                      <h5><span>3.</span>Can I bring guests along with me?</h5>
-                      <span>
-                        Yes, Just make sure you register them by requesting support. 
-                        At a work cafe, guests are free to visit for a day.
-                        At a co-working space you would be required to buy a day pass for your guest.
-                      </span>
-                    </p>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="{% static 'assets/img/features-4.png' %}" alt="" class="img-fluid">
-                  </div>
-                </div>
-              </div>
+          <br/>
+          <div class="span-12">
+            <div class="section-title">
+              <h2>Want To Know More</h2>
+              <h5>Feel Free To <a href="{% url 'contact' %}">Contact</a>  Us.</h5>
             </div>
           </div>
         </div>
-
       </div>
-    </section><!-- End Features Section -->
+    </section>
 
   </main><!-- End #main -->
 
@@ -389,9 +335,6 @@
     <div class="container">
       <div class="copyright">
         &copy; Copyright 2020 - <strong><span>Connect195</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        Designed by <a href=#>Enorvision</a>
       </div>
     </div>
   </footer><!-- End Footer -->

@@ -12,6 +12,9 @@ urlpatterns = [
     url(r'^events/$', views.events, name='events'),
     url(r'^insights/$', views.blog, name='blog'),
     url(r'^blog1/$', views.blog1, name='blog1'),
+    url(r'^blog2/$', views.blog2, name='blog2'),
+    url(r'^blog3/$', views.blog3, name='blog3'),
+    url(r'^blog4/$', views.blog4, name='blog4'),
     url(r'^gurugram/$', views.gurugram, name='gurugram'),
     url(r'^contact/$', views.contact, name='contact'),
 ]
