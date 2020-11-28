@@ -11,8 +11,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
-  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <link href="{% static 'assets/img/logo/logo.jpg' %}" rel="icon">
+  <!-- <link href="{% static 'assets/img/logo/logo.jpg' %}" rel="apple-touch-icon"> -->
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -29,6 +29,7 @@
   <!-- Template Main CSS File -->
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
 
+
 </head>
 
 <body>
@@ -37,14 +38,14 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo"><a href="{% url 'home' %}">Connect195</a></h1>
+      <!-- <h1 class="logo"><a href="{% url 'home' %}">Connect195</a></h1> -->
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="{% static 'assets/img/logo.png' %}" alt="" class="img-fluid"></a> -->
+      <a href="{% url 'home' %}" class="logo"><img src="{% static 'assets/img/logo/logo.jpg' %}" alt="" class="img-fluid"></a>
 
       <nav class="nav-menu d-none d-lg-block">
 
         <ul>
-          <li><a href="{% url 'home' %}">Home</a></li>
+          <li class="active"><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'about' %}">About Us</a></li>
           <li class="drop-down"><a href="#">Connect Centers</a>
             <ul>
@@ -66,7 +67,7 @@
           </li>
           <li><a href="{% url 'services' %}">Services</a></li>
           <li><a href="{% url 'blog' %}">Insights</a></li>
-          <li class="active"><a href="{% url 'pricing' %}">Pricing</a></li>
+          <li><a href="{% url 'pricing' %}">Pricing</a></li>
           <li><a href="{% url 'events' %}">Events</a></li>
 
         </ul>
@@ -77,115 +78,8 @@
 
     </div>
   </header><!-- End Header -->
-
-  <main id="main">
-
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
-
-      </div>
-    </section><!-- End Breadcrumbs -->
-
-    <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing">
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="box">
-              <h3 style="color:#d9232d">Silver</h3>
-              <ul>
-                <li>HBF board Promotions free (1 post per month)</li>
-                <li>Company Incorporation</li>
-                <li>Limited License  & Registration</li>
-                <li>Event Subscriptions</li>
-                <li>Fundraising Approach</li>
-                <li>CRM Lead management</li>
-                <li>Customer Lead request</li>
-                <li>HRM Attendance Management</li>
-                <li>Leave management</li>
-                <li>Task Management</li>
-                <li>Accounting Software</li>
-                <li>One Admin – 5 Employees</li>
-                <li>Legal Quick 4 Agreement</li>
-                <li>One informative call free for 15 mins</li>
-                <li>Data 2 GB</li>
-                <li>Expert advice on sachi advice platform</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="{% url 'checkout' %}" class="btn-buy" >Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
-            <div class="box featured" style="border-style: solid;">
-              <h3>Platinum</h3>
-
-              <ul>
-                <li>HBF board Promotions free (1 post per Day)</li>
-                <li>Company Incorporation</li>
-                <li>Licence Incorporation</li>
-                <li>Event Subscription</li>
-                <li>Fundraising Approach</li>
-                <li>Full CRM Support (2gb Data) (100 user)</li>
-                <li>HRM Full access</li>
-                <li>Accounting Software – Sale Purchase, Expense bill scan copy</li>
-                <li>Informative Website</li>
-                <li>12 agreement per year Verify Legal (Report submission chargeable)</li>
-                <li>HBF board Promotions free (1 post per Day)</li>
-                <li>Quick doc free</li>
-                <li>Customised 5 agreement</li>
-                <li>Unlimited Admin – 100 Employees</li>
-                <li>ESI PF</li>
-                <li>1 hr free time for call centre</li>
-                <li>One free visit Quarterly</li>
-                <li>Expert Call 3meetings per months (3 hr)</li>
-                <li>Software changes available cost to cost</li>
-                <li>Expert advice on sachi advice platform</li>
-                <li>Free call access</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="{% url 'checkout' %}" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-            <div class="box">
-              <h3 style="color:#d9232d">Gold</h3>
-              <ul>
-                <li>HBF board Promotions free (1 post per Day)</li>
-                <li>Company Incorporation</li>
-                <li>License Incorporation</li>
-                <li>Event Subscriptions</li>
-                <li>Fundraising Approach</li>
-                <li>Full CRM Support (2gb Data) (100 user)</li>
-                <li>HRM Full access</li>
-                <li>Accounting Software – Sale Purchase, Expense bill scan copy</li>
-                <li>Informative Website</li>
-                <li>Three Admin – 100 Employees</li>
-                <li>ESI PF</li>
-                <li>Quick legal docs free 10 agreement</li>
-                <li>1 hr free time for call Centre</li>
-                <li>Expert Call cost accordingly Software changes available on cost to cost</li>
-                <li>Expert advice on sachi advice platform</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="{% url 'checkout' %}" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Pricing Section -->
-
-  </main><!-- End #main -->
-
+  {% block content %}
+  {% endblock %}
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="footer-top">

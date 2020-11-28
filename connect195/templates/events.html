@@ -1,91 +1,6 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>Connect195</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="{% static 'assets/events/assets/css/bootstrap.min.css' %}" >
-    <!-- Icon -->
-    <link rel="stylesheet" type="text/css" href="{% static 'assets/events/assets/fonts/line-icons.css' %}">
-    <!-- Nivo Lightbox -->
-    <link rel="stylesheet" type="text/css" href="{% static 'assets/events/assets/css/nivo-lightbox.css' %}" >
-    <!-- Animate -->
-    <link rel="stylesheet" type="text/css" href="{% static 'assets/events/assets/css/animate.css' %}">
-    <!-- Main Style -->
-    <link rel="stylesheet" type="text/css" href="{% static 'assets/events/assets/css/main.css' %}">
-    <!-- Responsive Style -->
-    <link rel="stylesheet" type="text/css" href="{% static 'assets/events/assets/css/responsive.css' %}">
-    <!-- Favicons -->
-    <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
-    <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
-    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
-    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
-    <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
-    <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
-    <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
-    <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
-
-    <!-- Template Main CSS File -->
-    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
-
-  </head>
-  <body>
-
-    <header id="header" class="fixed-top ">
-      <div class="container d-flex align-items-center">
-  
-        <h1 class="logo"><a href="{% url 'home' %}">Connect195</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html" class="logo"><img src="{% static 'assets/img/logo.png' %}" alt="" class="img-fluid"></a> -->
-  
-        <nav class="nav-menu d-none d-lg-block">
-  
-          <ul>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'about' %}">About Us</a></li>
-            <li class="drop-down"><a href="#">Connect Centers</a>
-              <ul>
-                <li class="drop-down"><a href="#">India</a>
-                  <ul>
-                    <li><a href="#">Banglore</a></li>
-                    <li><a href="#">Delhi</a></li>
-                    <li class="drop-down">
-                      <a href="#">Gurugram</a>
-                      <ul>
-                        <li><a href="{% url 'gurugram' %}">Gurugram Udyog Vihar</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Hyderabad</a></li>
-                    <li><a href="#">Mumbai</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li><a href="{% url 'services' %}">Services</a></li>
-            <li><a href="{% url 'blog' %}">Insights</a></li>
-            <li><a href="{% url 'pricing' %}">Pricing</a></li>
-            <li  class="active"><a href="{% url 'events' %}">Events</a></li>
-  
-          </ul>
-  
-        </nav><!-- .nav-menu -->
-  
-        <a href="{% url 'home' %}" class="get-started-btn ml-auto">Get Started</a>
-  
-      </div>
-    </header><!-- End Header -->
+{% block content %}
     <main id="main">
 
       <!-- Hero Area Start -->
@@ -870,3 +785,4 @@
     <script src="{% static 'assets/events/assets/js/main.js' %}"></script>      
   </body>
 </html>
+{% endblock %}
