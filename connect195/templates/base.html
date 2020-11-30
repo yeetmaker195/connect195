@@ -41,9 +41,7 @@
       <!-- <h1 class="logo"><a href="{% url 'home' %}">Connect195</a></h1> -->
       <!-- Uncomment below if you prefer to use an image logo -->
       <a href="{% url 'home' %}" class="logo"><img src="{% static 'assets/img/logo/logo.jpg' %}" alt="" class="img-fluid"></a>
-
       <nav class="nav-menu d-none d-lg-block">
-
         <ul>
           <li class="active"><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'about' %}">About Us</a></li>
@@ -69,13 +67,9 @@
           <li><a href="{% url 'blog' %}">Insights</a></li>
           <li><a href="{% url 'pricing' %}">Pricing</a></li>
           <li><a href="{% url 'events' %}">Events</a></li>
-
         </ul>
-
       </nav><!-- .nav-menu -->
-
-      <a href="{% url 'home' %}" class="get-started-btn ml-auto">Get Started</a>
-
+      <a href="{% url 'login' %}" class="get-started-btn ml-auto">Login/Signup</a>
     </div>
   </header><!-- End Header -->
   {% block content %}
@@ -92,7 +86,7 @@
               <p>
                 <strong>Address:</strong> HBF CONNECT,<br>H 11, H Block,<br> Sector 63, Noida,<br> Uttar Pradesh 20130<br>
                 <strong>Phone:</strong> 099713 37447<br>
-                <strong>Email:</strong> info@example.com<br>
+                <strong>Email:</strong> info@Connect195.com<br>
               </p>
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>

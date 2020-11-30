@@ -1,9 +1,15 @@
 from django.shortcuts import render
 
-# Create your views here.
-
 def home(request):
 	templateName = 'home.html'
+	return render(request, templateName)
+
+def login(request):
+	templateName = 'login.html'
+	return render(request, templateName)
+
+def register(request):
+	templateName = 'login.html'
 	return render(request, templateName)
 
 def about(request):
