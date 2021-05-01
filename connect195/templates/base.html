@@ -45,28 +45,11 @@
         <ul>
           <li class="active"><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'about' %}">About Us</a></li>
-          <li class="drop-down"><a href="#">Connect Centers</a>
-            <ul>
-              <li class="drop-down"><a href="#">India</a>
-                <ul>
-                  <li><a href="#">Banglore</a></li>
-                  <li><a href="#">Delhi</a></li>
-                  <li class="drop-down">
-                    <a href="#">Gurugram</a>
-                    <ul>
-                      <li><a href="{% url 'gurugram' %}">Gurugram Udyog Vihar</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Hyderabad</a></li>
-                  <li><a href="#">Mumbai</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a href="{% url 'services' %}">Services</a></li>
-          <li><a href="{% url 'blog' %}">Insights</a></li>
+          <li><a href="{% url 'services' %}">Opportunities</a></li>
+          <li><a href="{% url 'services' %}">Partner</a></li>
+          <!-- <li><a href="{% url 'blog' %}">Insights</a></li> -->
           <li><a href="{% url 'pricing' %}">Pricing</a></li>
-          <li><a href="{% url 'events' %}">Events</a></li>
+          <!-- <li><a href="{% url 'events' %}">Events</a></li> -->
         </ul>
       </nav><!-- .nav-menu -->
       <a href="{% url 'login' %}" class="get-started-btn ml-auto">Login/Signup</a>
