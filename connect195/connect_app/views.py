@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import *
 
 def home(request):
 	templateName = 'home.html'
@@ -9,7 +10,35 @@ def login(request):
 	return render(request, templateName)
 
 def register(request):
-	templateName = 'login.html'
+	if request.method == 'POST':
+		username = request.POST.get('username')
+		email = request.POST.get('email')
+		password = request.POST.get('password')
+		country = request.POST.get('country')
+		contact = request.POST.get('contact')
+		cname = request.POST.get('cname')
+		if request.POST.get('group') == "company":
+			company = Company(
+				name = username,
+				email = email,
+				password = password,
+				company = cname,
+				country = country,
+				contact = contact
+			)
+			company.save()
+		else:
+			agents = Agent(
+				name = username,
+				email = email,
+				password = password,
+				country = country,
+				contact = contact
+			)
+			agents.save()
+		templateName = 'login.html'
+	else:
+		templateName = 'login.html'
 	return render(request, templateName)
 
 def about(request):
@@ -62,4 +91,12 @@ def blog4(request):
 
 def gurugram(request):
 	templateName = 'gurugram.html'
+	return render(request, templateName)
+
+def company(request):
+	templateName = 'company.html'
+	return render(request, templateName)
+
+def agent(request):
+	templateName = 'agent.html'
 	return render(request, templateName)

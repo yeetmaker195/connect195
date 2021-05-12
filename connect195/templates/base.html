@@ -10,9 +10,9 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="{% static 'assets/img/logo/logo.jpg' %}" rel="icon">
-  <!-- <link href="{% static 'assets/img/logo/logo.jpg' %}" rel="apple-touch-icon"> -->
+   <!-- Favicons -->
+   <link href="{% static 'assets/img/logo/logo.jpg' %}" rel="icon">
+   <!-- <link href="{% static 'assets/img/logo/logo.jpg' %}" rel="apple-touch-icon"> -->
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -40,14 +40,15 @@
 
       <!-- <h1 class="logo"><a href="{% url 'home' %}">Connect195</a></h1> -->
       <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="{% url 'home' %}" class="logo"><img src="{% static 'assets/img/logo/logo.jpg' %}" alt="" class="img-fluid"></a>
+      <a href="{% url 'home' %}" class="logo">connect195</a>
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'about' %}">About Us</a></li>
           <li><a href="{% url 'services' %}">Opportunities</a></li>
-          <li><a href="{% url 'services' %}">Partner</a></li>
-          <!-- <li><a href="{% url 'blog' %}">Insights</a></li> -->
+          <li><a href="{% url 'company' %}">Company</a></li>
+          <li><a href="{% url 'agent' %}">Sales partner</a></li>
+          <li><a href="{% url 'blog' %}">story</a></li>
           <li><a href="{% url 'pricing' %}">Pricing</a></li>
           <!-- <li><a href="{% url 'events' %}">Events</a></li> -->
         </ul>

@@ -19,4 +19,6 @@ urlpatterns = [
     url(r'^blog4/$', views.blog4, name='blog4'),
     url(r'^gurugram/$', views.gurugram, name='gurugram'),
     url(r'^contact/$', views.contact, name='contact'),
+    url(r'^company/$', views.company, name='company'),
+    url(r'^agent/$', views.agent, name='agent'),
 ]

@@ -795,8 +795,8 @@ p.change_link{
                 {% csrf_token %} 
 				<h1>Log in</h1> 
 				<p> 
-					<label for="username" class="uname" data-icon="u" > Your email or username </label>
-					<input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
+					<label for="username" class="uname" data-icon="u" > Your email </label>
+					<input id="username" name="username" required="required" type="text" placeholder="mymail@mail.com"/>
 				</p>
 				<p> 
 					<label for="password" class="youpasswd" data-icon="p"> Your password </label>
@@ -806,6 +806,7 @@ p.change_link{
 					<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
 					<label for="loginkeeping">Keep me logged in</label>
 				</p>
+				
 				<p class="login button"> 
 					<input type="submit" value="Login" /> 
 				</p>
@@ -817,24 +818,40 @@ p.change_link{
 		</div>
 
 		<div id="register" class="animate form">
-			<form action="{% url 'signup' %}" action="POST" autocomplete="on"> 
+			<form action="{% url 'signup' %}" method="POST" autocomplete="on"> 
                 {% csrf_token %}
 				<h1> Sign up </h1> 
 				<p> 
-					<label for="usernamesignup" class="uname" data-icon="u">Your username</label>
-					<input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
+					<label for="group" class="uname"> Are you A </label>
+					<select id="group" name="group" class="form-control" onchange="changegroup()">
+						<option value="">Select Group</option>
+						<option value="company">Company</option>
+						<option value="Partner">Sales Partner</option>
+					</select>
+				</p>
+				<p> 
+					<label for="username" class="uname" data-icon="u">Full Name</label>
+					<input id="username" name="username" required="required" type="text" required/>
                 </p>
 				<p>
-					<label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
-					<input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/> 
+					<label for="email" class="youmail" data-icon="e" > Your email</label>
+					<input id="email" name="email" required="required" type="email" required/> 
+				</p>
+				<p>
+					<label for="contact" class="contact" data-icon="c" > Your Contact no</label>
+					<input id="contact" name="contact" required="required" type="number" required/> 
 				</p>
 				<p> 
-					<label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
-					<input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
+					<label for="password" class="youpasswd" data-icon="p">Your password </label>
+					<input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" required/>
+				</p>
+				<p id="comname"> 
+					<label for="cname" class="uname" data-icon="c" > Company Name </label>
+					<input id="cname" name="cname" type="text" placeholder=""/>
 				</p>
 				<p> 
-					<label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
-					<input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
+					<label for="country" class="youpasswd" data-icon="c">Country</label>
+					<input id="country" name="country" required="required" type="text" required/>
 				</p>
 				<p class="signin button"> 
 					<input type="submit" value="Sign up"/> 
@@ -849,6 +866,15 @@ p.change_link{
 	    </div>
     </div>
 </section>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>

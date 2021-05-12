@@ -414,7 +414,7 @@ h6 {
 #hero h2 {
   color: #fff;
   margin-bottom: 20px;
-  font-size: 48px;
+  font-size: 70px;
   font-weight: 700;
 }
 
@@ -1275,10 +1275,9 @@ section {
 }
 
 .pricing ul {
-  padding: 0;
-  list-style: none;
+  padding: 8px;
   color: #444444;
-  text-align: center;
+  text-align: initial;
   line-height: 20px;
   font-size: 14px;
 }

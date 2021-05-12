@@ -13,16 +13,14 @@
         <div class="carousel-item active" style="background-image: url({% static 'assets/img/slide/slide-1.jpg' %})">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Connect195</span></h2>
-              <h6 class="animate__animated animate__fadeInUp">
-                The Innovative Global B2B Commission- Only Sales Platform
-              </h6>
+              <h2 class="animate__animated animate__fadeInDown" style="color:;">Welcome to <span>Connect195</span></h2>
+              <h6 class="animate__animated animate__fadeInUp">The Innovative Global B2B Commission- Only Sales Platform</h6>
               <p class="animate__animated animate__fadeInUp">
                 We give you everything you need to recruit, manage, train and support your commission-only
                 sales team globally and saves huge sales staffing costs of companies</p>
               <!-- <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Click for Free membership Support & Services</a> -->
-              <form>
-                  <select name="who" vallue="" class="form-controll" style="width: 315px;height:42px"><option>I am a Company</option><option>I am a Agent</option></select><input type="text" name="email" vallue="Emaill"  class="form-controll" placeholder="Email id" style="width: 315px;height:42px"/><input type="submit" name="search" vallue="search" class="form-controll btn-get-started animate__animated animate__fadeInUp scrollto" style="width: 315px;height:42px"/>
+              <form action="{% url 'signup' %}" method="GET">
+                  <select name="who" vallue="" class="form-controll" style="width: 315px;height:70px"><option>I am a Company</option><option>I am a Agent</option></select><input type="text" name="email" vallue="Emaill"  class="form-controll" placeholder="Email id" style="width: 315px;height:70px"/><input type="submit" name="search" vallue="search" class="form-controll btn-get-started animate__animated animate__fadeInUp scrollto" style="width: 315px;height:70px"/>
               </form>
             </div>
           </div>
@@ -66,8 +64,8 @@
 
         <div class="row content">
           <div class="col-lg-6">
-            <h2>Connect195</h2>
-            <h3>COMPANIES, WHAT YOU GET ACCESS TO:</h3>
+            <h2 style="color:red;">Connect195</h2>
+            <h3 style="color:green;"><b>COMPANIES, WHAT YOU GET ACCESS TO:-</b></h3>
             <ul>
             <li><i class="ri-check-double-line"></i> <p>The world&#39;s fastest growing pool of experienced freelance sales experts</p></li>
               <li><i class="ri-check-double-line"></i> <p>Save huge amount on hiring and training</p></li>
@@ -77,10 +75,7 @@
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <h1>&nbsp;</h1>
-            <h1>&nbsp;</h1>
-            <p>
-              SALES FREELANCERS, WHAT YOU GET ACCESS TO:-
-            </p>
+            <h3 style="color:green;"><b>SALES FREELANCERS, WHAT YOU GET ACCESS TO:-</b></h3> 
             <ul>
               <li><i class="ri-check-double-line"></i> <p>The world&#39;s fastest growing database of top vetted companies globally</p></li>
               <li><i class="ri-check-double-line"></i> <p>Build and easily manage your ultimate sales portfolio all in one place</p></li>
@@ -96,7 +91,7 @@
 
     <div class="container">
       <div class="section-title">
-        <h2>Clients</h2>
+        <h2 style="color:red;">Clients</h2>
         <p>Our Valuable Clients</p>
       </div>
     </div>
@@ -138,13 +133,12 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Service</h2>
-          <p>What we offer-</p>
         </div>
-        <h3>The only platform that provides All in One Sales Solutions</h3>
-        <p>The easiest way for companies and sales freelancers to connect and manage successful
-          working partnerships globally</p>
-
+        <center><h1>The only <b><u style="color: red;">All in One</u></b> Solutions</h1>
+        <p><b>The easiest way for companies and sales freelancers to connect and manage successful
+          working partnerships globally</b></p>
+        </center>
+        <h4>what we offer:-</h4>
         <div class="row">
           <div class="col-md-6">
             <div class="icon-box">
@@ -158,7 +152,7 @@
               <i class="icofont-chart-bar-graph"></i>
               <h4><a href="#">Manage</a></h4>
               <p>We help that how to start your business. Provide all kind of basic support to starting a business. Our expert start helping you from basic steps.</p>
-            </div>
+             </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box">
