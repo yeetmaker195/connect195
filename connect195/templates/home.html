@@ -13,22 +13,27 @@
         <div class="carousel-item active" style="background-image: url({% static 'assets/img/slide/slide-1.jpg' %})">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown" style="color:;">Welcome to <span>Connect195</span></h2>
-              <h6 class="animate__animated animate__fadeInUp">The Innovative Global B2B Commission- Only Sales Platform</h6>
+              <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Connect195</span></h2>
+              <h6 class="animate__animated animate__fadeInUp">Fastest Growing Sales & Marketing Platform</h6>
               <p class="animate__animated animate__fadeInUp">
-                We give you everything you need to recruit, manage, train and support your commission-only
-                sales team globally and saves huge sales staffing costs of companies</p>
+                195 countries,infinite products & service. one platfform</p><br>
+                <!--<p style="font-size: 45px;"><b>fastest growing sales & marketing platform</b></p-->
+                <!--<p style="font-size: 25px;">195 countries,infinite products & service. one platfform</p-->  
+
               <!-- <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Click for Free membership Support & Services</a> -->
-              <form action="{% url 'signup' %}" method="GET">
-                  <select name="who" vallue="" class="form-controll" style="width: 315px;height:70px"><option>I am a Company</option><option>I am a Agent</option></select><input type="text" name="email" vallue="Emaill"  class="form-controll" placeholder="Email id" style="width: 315px;height:70px"/><input type="submit" name="search" vallue="search" class="form-controll btn-get-started animate__animated animate__fadeInUp scrollto" style="width: 315px;height:70px"/>
-              </form>
+              <!-- <form action="{% url 'signup' %}" method="GET">
+                  <select name="who" vallue="" class="form-controll" style="width: 315px;height:70px"><option>I am a Company</option><option>I am a Agent</option></select><input type="text" name="email" vallue="Emaill"  class="form-controll" placeholder="Email id" style="width: 315px;height:70px"/><input type="submit" name="search" vallue="search" class="form-controll btn-get-started animate__animated animate__fadeInUp scrollto" style="width: 315px;height:70px-->
+                  
+              </form> -->
+              <center><button id="changecolor" style="padding: 5px 40px;border-radius: 30px;font-size: 24px;"><a href="{% url 'signup' %}" style="color:black">i am looking to earn/<br/>i am an individual</a></button>
+              <button id="changecolor" style="padding: 5px 40px;border-radius: 30px;font-size: 24px;margin-left:50px;"><a href="{% url 'signup' %}" style="color:black">i am looking to sell/<br/>i am an employer</a></button></center>
             </div>
           </div>
         </div>
 
         <!-- Slide 2 -->
         <!-- <div class="carousel-item" style="background-image: url({% static 'assets/img/slide/slide-2.jpg' %})">
-          <div class="carousel-container">
+          <div class="car ousel-container">
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown"></h2>
               <p class="animate__animated animate__fadeInUp">
@@ -64,7 +69,7 @@
 
         <div class="row content">
           <div class="col-lg-6">
-            <h2 style="color:red;">Connect195</h2>
+            <!--<h2 style="color:red;">Connect195</h2-->
             <h3 style="color:green;"><b>COMPANIES, WHAT YOU GET ACCESS TO:-</b></h3>
             <ul>
             <li><i class="ri-check-double-line"></i> <p>The world&#39;s fastest growing pool of experienced freelance sales experts</p></li>
@@ -73,8 +78,8 @@
                 and pay your new sales partners easily</p></li>
           </ul>
           </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <h1>&nbsp;</h1>
+          <div class="col-lg-6" >
+            <!--<h1>&nbsp;</h1-->
             <h3 style="color:green;"><b>SALES FREELANCERS, WHAT YOU GET ACCESS TO:-</b></h3> 
             <ul>
               <li><i class="ri-check-double-line"></i> <p>The world&#39;s fastest growing database of top vetted companies globally</p></li>
@@ -91,8 +96,8 @@
 
     <div class="container">
       <div class="section-title">
-        <h2 style="color:red;">Clients</h2>
-        <p>Our Valuable Clients</p>
+        <h2 style="color:red;">company</h2>
+        <p>GREAT COMPANIES ONBOARD WITH US</p>
       </div>
     </div>
 
@@ -123,11 +128,11 @@
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
             <img src="{% static 'assets/img/clients/6.png' %}" class="img-fluid" alt="">
-          </div>
+          </div><br><br>
 
       </div>
     </section><!-- End Clients Section -->
-
+    
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
       <div class="container">
@@ -201,13 +206,64 @@
       </div>
     </section><!-- End Services Section -->
 
+    <section id="counts" class="counts">
+      <div class="container">
+       <!--<h1 align="center"><b style="color: crimson;">GREAT COMPANIES ONBOARD WITH US</b></h1-->
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box" style="background-color:gray;">
+              <i class="bi bi-emoji-smile"></i>
+              <div>
+
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter" style="color: black;">32</span>
+                <p><b>total product $ services listed</b></p>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box" style="background-color:gray;">
+              <i class="bi bi-journal-richtext" style="color: #ee6c20;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter" style="color: black;">40</span>
+                <p><b>Total sales agents worldwide</b></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box" style="background-color:gray;">
+              <i class="bi bi-headset" style="color: #15be56;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter" style="color: black;">55</span>
+                <p><b>Total companies listed</b></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box" style="background-color:gray;">
+              <i class="bi bi-people" style="color: #bb0852;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="285" data-purecounter-duration="1" class="purecounter" style="color: black;">66</span>
+                <p><b>Total clients closed</b></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
 
     <!-- ======= Partnership Section ======= -->
     <section id="about" class="about">
       <div class="container">
         <h2 style='font-size: 150%;'>Eco-System Partnership</h2>
         <div class="row content">
-          <iframe title="vimeo-player" src="https://player.vimeo.com/video/374402839" width="740" height="400" frameborder="0" allowfullscreen></iframe>
+          <iframe title="vimeo-player" src="https://www.youtube.com/embed/y8dBDCc-cjk " width="740" height="400" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
     </section>

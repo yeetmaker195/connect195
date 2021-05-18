@@ -20,6 +20,7 @@
   <!-- Vendor CSS Files -->
   <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
   <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
   <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
   <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
   <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
@@ -28,8 +29,44 @@
 
   <!-- Template Main CSS File -->
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
-
-
+  <style>
+    .counts {
+      padding: 70px 0 60px;
+    }
+    .g-4, .gy-4 {
+    --bs-gutter-y: 1.5rem;
+    }
+    .counts .count-box {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    width: 90%;
+    background: #ffffff;
+    box-shadow: 0px 0 30px rgb(1 41 112 / 8%);
+}
+.counts .count-box i {
+    font-size: 40px;
+    line-height: 0;
+    margin-right: 25px;
+    color: #4154f1;
+}
+.counts .count-box span {
+    font-size: 65px;
+    display: block;
+    font-weight: 600;
+    color: #0b198f;
+}
+  .about .content h2 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 60px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+#changecolor:hover{
+  background: lightskyblue;
+}
+  </style>
 </head>
 
 <body>
@@ -43,13 +80,16 @@
       <a href="{% url 'home' %}" class="logo">connect195</a>
       <nav class="nav-menu d-none d-lg-block">
         <ul>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li><li>&nbsp;</li>
+          <li>&nbsp;</li>
           <li class="active"><a href="{% url 'home' %}">Home</a></li>
-          <li><a href="{% url 'about' %}">About Us</a></li>
+          <!--<li><a href="{% url 'about' %}">About Us</a></li-->
           <li><a href="{% url 'services' %}">Opportunities</a></li>
           <li><a href="{% url 'company' %}">Company</a></li>
-          <li><a href="{% url 'agent' %}">Sales partner</a></li>
-          <li><a href="{% url 'blog' %}">story</a></li>
-          <li><a href="{% url 'pricing' %}">Pricing</a></li>
+          <li><a href="{% url 'agent' %}">Sales partner</a></li>  
+          <!--<li><a href="{% url 'blog' %}">story</a></li-->
+          <!--<li><a href="{% url 'pricing' %}">Pricing</a></li-->
           <!-- <li><a href="{% url 'events' %}">Events</a></li> -->
         </ul>
       </nav><!-- .nav-menu -->
@@ -86,21 +126,25 @@
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contact' %}">Contact</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'blog' %}">story</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'pricing' %}">Pricing</a></li>
+              <!--<li><i class="bx bx-chevron-right"></i> <a href="{% url 'contact' %}">Contact</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'services' %}">FAQs</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Free Support</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li-->
             </ul>
           </div>
   
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Locations</h4>
+            <h4>facts & stats</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Banglore</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contact' %}">Contact</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'services' %}">FAQs</a></li>
+              <!--<li><i class="bx bx-chevron-right"></i> <a href="#">Banglore</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Delhi</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'gurugram' %}">Gurugram</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Hyderabad</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Mumbai</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Mumbai</a></li-->
             </ul>
           </div>
 
@@ -126,6 +170,7 @@
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
   <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
   <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
   <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
