@@ -1,13 +1,28 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import *
+
 
 def home(request):
 	templateName = 'home.html'
 	return render(request, templateName)
 
 def login(request):
-	templateName = 'login.html'
-	return render(request, templateName)
+	if request.method == 'GET':
+		templateName = 'login.html'
+		return render(request, templateName)
+	else:
+		email = request.POST.get('username')
+		password = request.POST.get('password')
+		user = Agent.objects.get(email=email, password=password)
+		request.session['email'] = email
+		print(request.session['email'])
+		return render(request, 'adminpanel/dashboard.html', {'email':email})
+
+def logout(request):
+	if request.method == 'GET':
+		request.session.flush()
+		print("working")
+		return redirect('/login')
 
 def register(request):
 	if request.method == 'POST':
@@ -100,3 +115,82 @@ def company(request):
 def agent(request):
 	templateName = 'agent.html'
 	return render(request, templateName)
+
+def dashboard(request):
+	templateName = 'adminpanel/dashboard.html'
+	return render(request, templateName)
+
+def pipeline(request):
+	templateName = 'adminpanel/pipeline.html'
+	return render(request, templateName)
+
+def leads(request):
+	templateName = 'adminpanel/leads.html'
+	leads = Leads.objects.filter().all()
+	return render(request, templateName, {'data': leads})
+
+def opportunities(request):
+	templateName = 'adminpanel/opportunities.html'
+	# opportunities = opportunities.objects.filter().all()
+	return render(request, templateName)
+
+def training(request):
+	templateName = 'adminpanel/training.html'
+	return render(request, templateName)
+
+def application(request):
+	templateName = 'adminpanel/application.html'
+	return render(request, templateName)
+
+def payments(request):
+	templateName = 'adminpanel/payments.html'
+	return render(request, templateName)
+
+def helpCenter(request):
+	templateName = 'adminpanel/helpcenter.html'
+	return render(request, templateName)
+
+def addLead(request):
+	templateName = 'adminpanel/leads.html'
+	if request.method == 'POST':
+		name = request.POST.get('name')
+		job = request.POST.get('job')
+		phone = request.POST.get('phone')
+		contact = request.POST.get('contact')
+		comment = request.POST.get('comment')
+		agent = Agent.objects.get(email=request.session['email'])
+		lead = Leads(
+			name = name,
+			contact = contact,
+			job_title = job,
+			note = comment,
+			created_by = agent
+		)
+		lead.save()
+		message = "Leads created successfully!"
+	return render(request, templateName, {'message': message})
+
+def addopportunities(request):
+	templateName = 'adminpanel/opportunities.html'
+	if request.method == 'POST':
+		Industries = request.POST.get('industries')
+		Company = request.POST.get('company')
+		Country = request.POST.get('country')
+		BusinessType = request.POST.get('businesstype')
+		Commission = request.POST.get('commission')
+		other = request.POST.get('other')
+		agent = Agent.objects.get(email=request.session['email'])
+		opportunities = opportunities(
+			Industries = industries,
+			Company = company,
+			Country = country,
+			BusinessType = businesstype,
+			Commission = commission,
+			other = other,
+			created_by = agent
+		)
+		opportunities.save()
+		message = "Leads created successfully!"
+	return render(request, templateName, {'message': message})
+
+

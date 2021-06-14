@@ -37,18 +37,24 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo"><a href="{% url 'home' %}">Connect195</a></h1>
+      <h1 class="logo"><a href="{% url 'home' %}" style="color: red;">Connect195</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="{% static 'assets/img/logo.png' %}" alt="" class="img-fluid"></a> -->
 
       <nav class="nav-menu d-none d-lg-block">
 
         <ul>
-          <li><a href="{% url 'home' %}">Home</a></li>
-          <li><a href="{% url 'about' %}">About Us</a></li>
-          <li class="drop-down"><a href="#">Connect Centers</a>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li><li>&nbsp;</li>
+          <li>&nbsp;</li>
+          <li class="active"><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'services' %}">Opportunities</a></li>
+          <li><a href="{% url 'company' %}">Company</a></li>
+          <li><a href="{% url 'agent' %}">Sales partner</a></li>  
+          <!--<li><a href="{% url 'about' %}">About Us</a></li>
+          <li class="drop-down"><a href="#">Connect Centers</a-->
             <ul>
-              <li class="drop-down"><a href="#">India</a>
+              <!--<li class="drop-down"><a href="#">India</a>
                 <ul>
                   <li><a href="#">Banglore</a></li>
                   <li><a href="#">Delhi</a></li>
@@ -69,11 +75,11 @@
           <li><a href="{% url 'pricing' %}">Pricing</a></li>
           <li><a href="{% url 'events' %}">Events</a></li>
 
-        </ul>
+        </ul-->
 
       </nav><!-- .nav-menu -->
 
-      <a href="{% url 'home' %}" class="get-started-btn ml-auto">Get Started</a>
+      <a href="{% url 'login' %}" class="get-started-btn ml-auto">Login/Signup</a>
 
     </div>
   </header><!-- End Header -->
@@ -107,7 +113,7 @@
               <div class="email">
                 <i class="icofont-envelope"></i>
                 <h4>Email:</h4>
-                <p>info@example.com</p>
+                <p>info@connect195.com</p>
               </div>
 
               <div class="phone">
@@ -170,7 +176,7 @@
             <p>
               <strong>Address:</strong> HBF CONNECT,<br>H 11, H Block,<br> Sector 63, Noida,<br> Uttar Pradesh 20130<br>
               <strong>Phone:</strong> 099713 37447<br>
-              <strong>Email:</strong> info@example.com<br>
+              <strong>Email:</strong> info@connect195.com<br>
             </p>
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -186,21 +192,23 @@
           <h4>Useful Links</h4>
           <ul>
             <li><i class="bx bx-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contact' %}">Contact</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'services' %}">FAQs</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Free Support</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'blog' %}">story</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'pricing' %}">Pricing</a></li>
+            <!--<li><i class="bx bx-chevron-right"></i> <a href="#">Free Support</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li-->
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-6 footer-links">
-          <h4>Locations</h4>
+          <h4>facts & stats</h4>
           <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Banglore</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contact' %}">Contact</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'services' %}">FAQs</a></li>
+            <!--<li><i class="bx bx-chevron-right"></i> <a href="#">Banglore</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="#">Delhi</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="{% url 'gurugram' %}">Gurugram</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="#">Hyderabad</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Mumbai</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Mumbai</a></li-->
           </ul>
         </div>
 

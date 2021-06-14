@@ -21,4 +21,15 @@ urlpatterns = [
     url(r'^contact/$', views.contact, name='contact'),
     url(r'^company/$', views.company, name='company'),
     url(r'^agent/$', views.agent, name='agent'),
-]
+    url(r'^dashboard/$', views.dashboard, name='dashboard'),
+    url(r'^pipeline/$', views.pipeline, name='pipeline'),
+    url(r'^leads/$', views.leads, name='leads'),
+    url(r'^opportunities/$', views.opportunities, name='opportunities'),
+    url(r'^training/$', views.training, name='training'),
+    url(r'^application/$', views.application, name='application'),
+    url(r'^payments/$', views.payments, name='payments'),
+    url(r'^helpcenter/$', views.helpCenter, name='helpcenter'),
+    url(r'^logout/$', views.logout, name='logout'),
+    url(r'^addlead/$', views.addLead, name='addlead'),
+    url(r'^addopportunities/$', views.addopportunities, name='addopportunities'),
+    ]

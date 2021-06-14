@@ -791,7 +791,7 @@ p.change_link{
 	<a class="hiddenanchor" id="tologin"></a>
 	<div id="wrapper">
 		<div id="login" class="animate form">
-			<form action="{% url 'login' %}" action="POST" autocomplete="on"> 
+			<form action="{% url 'login' %}" method="POST" autocomplete="on"> 
                 {% csrf_token %} 
 				<h1>Log in</h1> 
 				<p> 
@@ -802,11 +802,6 @@ p.change_link{
 					<label for="password" class="youpasswd" data-icon="p"> Your password </label>
 					<input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" /> 
 				</p>
-				<p class="keeplogin"> 
-					<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
-					<label for="loginkeeping">Keep me logged in</label>
-				</p>
-				
 				<p class="login button"> 
 					<input type="submit" value="Login" /> 
 				</p>
@@ -816,13 +811,12 @@ p.change_link{
 				</p>
 			</form>
 		</div>
-
 		<div id="register" class="animate form">
 			<form action="{% url 'signup' %}" method="POST" autocomplete="on"> 
                 {% csrf_token %}
 				<h1> Sign up </h1> 
 				<p> 
-					<label for="group" class="uname"> Are you A </label>
+					<label for="group" class="uname"> Are you a </label>
 					<select id="group" name="group" class="form-control" onchange="changegroup()">
 						<option value="">Select Group</option>
 						<option value="company">Company</option>
@@ -842,7 +836,7 @@ p.change_link{
 					<input id="contact" name="contact" required="required" type="number" required/> 
 				</p>
 				<p> 
-					<label for="password" class="youpasswd" data-icon="p">Your password </label>
+					<label for="password" class="youpasswd" data-icon="">Your password </label>
 					<input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" required/>
 				</p>
 				<p id="comname"> 

@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<style>
+  .btn-info {
+    color: #fff;
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+</style>
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
@@ -15,22 +22,18 @@
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Connect195</span></h2>
               <h6 class="animate__animated animate__fadeInUp">Fastest Growing Sales & Marketing Platform</h6>
-              <p class="animate__animated animate__fadeInUp">
-                195 countries,infinite products & service. one platfform</p><br>
+              <p class="animate__animated animate__fadeInUp">195 countries,infinite products & service. one platfform</p><br>
                 <!--<p style="font-size: 45px;"><b>fastest growing sales & marketing platform</b></p-->
                 <!--<p style="font-size: 25px;">195 countries,infinite products & service. one platfform</p-->  
-
               <!-- <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Click for Free membership Support & Services</a> -->
               <!-- <form action="{% url 'signup' %}" method="GET">
                   <select name="who" vallue="" class="form-controll" style="width: 315px;height:70px"><option>I am a Company</option><option>I am a Agent</option></select><input type="text" name="email" vallue="Emaill"  class="form-controll" placeholder="Email id" style="width: 315px;height:70px"/><input type="submit" name="search" vallue="search" class="form-controll btn-get-started animate__animated animate__fadeInUp scrollto" style="width: 315px;height:70px-->
-                  
               </form> -->
-              <center><button id="changecolor" style="padding: 5px 40px;border-radius: 30px;font-size: 24px;"><a href="{% url 'signup' %}" style="color:black">i am looking to earn/<br/>i am an individual</a></button>
-              <button id="changecolor" style="padding: 5px 40px;border-radius: 30px;font-size: 24px;margin-left:50px;"><a href="{% url 'signup' %}" style="color:black">i am looking to sell/<br/>i am an employer</a></button></center>
+              <center><button class="get-started-btn ml-auto" style="padding: 5px 40px;border-radius: 58px;font-size: 24px;"><a href="{% url 'signup' %}" style="color:black">i am looking to earn<br/>i am an individual</a></button>
+              <button class="get-started-btn ml-auto" style="padding: 5px 40px;border-radius: 58px;font-size: 24px;margin-left:50px;"><a href="{% url 'signup' %}" style="color:black">i am looking to sell<br/>i am an employer</a></button></center>
             </div>
           </div>
         </div>
-
         <!-- Slide 2 -->
         <!-- <div class="carousel-item" style="background-image: url({% static 'assets/img/slide/slide-2.jpg' %})">
           <div class="car ousel-container">
@@ -202,72 +205,66 @@
             </div>
           </div>
         </div>
-
       </div>
     </section><!-- End Services Section -->
-
     <section id="counts" class="counts">
       <div class="container">
-       <!--<h1 align="center"><b style="color: crimson;">GREAT COMPANIES ONBOARD WITH US</b></h1-->
+        <h1 align="center">Our Work</h1>
         <div class="row gy-4">
-
           <div class="col-lg-3 col-md-6">
-            <div class="count-box" style="background-color:gray;">
+            <div class="count-box" style="background-color: #efe7e7;">
               <i class="bi bi-emoji-smile"></i>
               <div>
 
                 <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter" style="color: black;">32</span>
-                <p><b>total product $ services listed</b></p>
+                <p><b>Total Product $ Services Listed</b></p>
                 
               </div>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6">
-            <div class="count-box" style="background-color:gray;">
+            <div class="count-box" style="background-color:#efe7e7;">
               <i class="bi bi-journal-richtext" style="color: #ee6c20;"></i>
               <div>
                 <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter" style="color: black;">40</span>
-                <p><b>Total sales agents worldwide</b></p>
+                <p><b>Total Sales Agents Worldwide</b></p>
               </div>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6">
-            <div class="count-box" style="background-color:gray;">
+            <div class="count-box" style="background-color:#efe7e7;">
               <i class="bi bi-headset" style="color: #15be56;"></i>
               <div>
                 <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter" style="color: black;">55</span>
-                <p><b>Total companies listed</b></p>
+                <p><b>Total Companies Listed</b></p>
               </div>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6">
-            <div class="count-box" style="background-color:gray;">
+            <div class="count-box" style="background-color:#efe7e7;">
               <i class="bi bi-people" style="color: #bb0852;"></i>
               <div>
                 <span data-purecounter-start="0" data-purecounter-end="285" data-purecounter-duration="1" class="purecounter" style="color: black;">66</span>
-                <p><b>Total clients closed</b></p>
+                <p><b>Total Clients Closed</b></p>
               </div>
             </div>
           </div>
-
         </div>
-
       </div>
     </section>
 
     <!-- ======= Partnership Section ======= -->
     <section id="about" class="about">
       <div class="container">
-        <h2 style='font-size: 150%;'>Eco-System Partnership</h2>
+        <h1 align="center">Eco-System Partnership</h2>
         <div class="row content">
-          <iframe title="vimeo-player" src="https://www.youtube.com/embed/y8dBDCc-cjk " width="740" height="400" frameborder="0" allowfullscreen></iframe>
+          <iframe title="vimeo-player" src="https://www.youtube.com/embed/y8dBDCc-cjk " width="100%" height="400" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
     </section>
-
     <!-- <section id="partnership" class="partnership">
       <div class="container">
         <centre>
