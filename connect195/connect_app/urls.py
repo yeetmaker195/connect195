@@ -32,4 +32,6 @@ urlpatterns = [
     url(r'^logout/$', views.logout, name='logout'),
     url(r'^addlead/$', views.addLead, name='addlead'),
     url(r'^addopportunities/$', views.addopportunities, name='addopportunities'),
+    url(r'^addeditprofile/$', views.addeditprofile, name='addeditprofile'),
+    url(r'^editprofile/$', views.editprofile, name='editprofile'),
     ]

@@ -50,14 +50,7 @@ class opportunities(models.Model):
 
     def __str__(self):
         return self.commission
-
-class industries(models.Model):
-    name = models.CharField(max_length=255)
-    created_on = models.DateTimeField(auto_now_add=True)
-    is_active = models.IntegerField(max_length=255)
-
-    def __str__(self):
-        return self.name
+     
 
 
 

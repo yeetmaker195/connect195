@@ -150,6 +150,11 @@ def helpCenter(request):
 	templateName = 'adminpanel/helpcenter.html'
 	return render(request, templateName)
 
+def editprofile(request):
+	templateName = 'adminpanel/editprofile.html'
+	agent = Agent.objects.get(email=request.session['email'])
+	return render(request, templateName, {'data': agent})	
+
 def addLead(request):
 	templateName = 'adminpanel/leads.html'
 	if request.method == 'POST':
@@ -172,25 +177,43 @@ def addLead(request):
 
 def addopportunities(request):
 	templateName = 'adminpanel/opportunities.html'
+	# if request.method == 'POST':
+	# 	Industries = request.POST.get('industries')
+	# 	Company = request.POST.get('company')
+	# 	Country = request.POST.get('country')
+	# 	BusinessType = request.POST.get('businesstype')
+	# 	Commission = request.POST.get('commission')
+	# 	other = request.POST.get('other')
+	# 	agent = Agent.objects.get(email=request.session['email'])
+	# 	opportunities = opportunities(
+	# 		Industries = industries,
+	# 		Company = company,
+	# 		Country = country,
+	# 		BusinessType = businesstype,
+	# 		Commission = commission,
+	# 		other = other,
+	# 		created_by = agent
+	# 	)
+	# 	opportunities.save()
+	return render(request, templateName, {'message': "message"})
+
+def addeditprofile(request):
+	templateName = 'adminpanel/editprofile.html'
 	if request.method == 'POST':
-		Industries = request.POST.get('industries')
-		Company = request.POST.get('company')
-		Country = request.POST.get('country')
-		BusinessType = request.POST.get('businesstype')
-		Commission = request.POST.get('commission')
-		other = request.POST.get('other')
+		name = request.POST.get('name')
+		email = request.POST.get('EmailID')
+		contact = request.POST.get('mobileno')
+		country = request.POST.get('country')
 		agent = Agent.objects.get(email=request.session['email'])
-		opportunities = opportunities(
-			Industries = industries,
-			Company = company,
-			Country = country,
-			BusinessType = businesstype,
-			Commission = commission,
-			other = other,
-			created_by = agent
+		editprofile = Agent(
+			name = name,
+			Country = Country,
+			email = emailid,
+			contact = mobileno
 		)
-		opportunities.save()
-		message = "Leads created successfully!"
-	return render(request, templateName, {'message': message})
+		editprofile.save()
+	return render(request, templateName, {'message': "message"})
+
+
 
 
