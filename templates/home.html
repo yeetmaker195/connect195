@@ -1,0 +1,442 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+  .btn-info {
+    color: #fff;
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+</style>
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url({% static 'assets/img/slide/slide-4.jpg' %})">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Connect195</span></h2>
+              <h6 class="animate__animated animate__fadeInUp">Fastest Growing Sales & Marketing Platform</h6>
+              <p class="animate__animated animate__fadeInUp">195 countries,infinite products & service. one platfform</p><br>
+                <!--<p style="font-size: 45px;"><b>fastest growing sales & marketing platform</b></p-->
+                <!--<p style="font-size: 25px;">195 countries,infinite products & service. one platfform</p-->  
+              <!-- <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Click for Free membership Support & Services</a> -->
+              <!-- <form action="{% url 'signup' %}" method="GET">
+                  <select name="who" vallue="" class="form-controll" style="width: 315px;height:70px"><option>I am a Company</option><option>I am a Agent</option></select><input type="text" name="email" vallue="Emaill"  class="form-controll" placeholder="Email id" style="width: 315px;height:70px"/><input type="submit" name="search" vallue="search" class="form-controll btn-get-started animate__animated animate__fadeInUp scrollto" style="width: 315px;height:70px-->
+              <!-- </form> -->
+              <center><button class="get-started-btn ml-auto" style="padding: 5px 40px;border-radius: 58px;font-size: 18px;"><a href="{% url 'signup' %}" style="color:black">i am looking to earn<br/>i am an individual</a></button>
+              <button class="get-started-btn ml-auto" style="padding: 5px 40px;border-radius: 58px;font-size: 18px;margin-left:50px;"><a href="{% url 'signup' %}" style="color:black">i am looking to sell<br/>i am an employer</a></button></center>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <!-- <div class="carousel-item" style="background-image: url({% static 'assets/img/slide/slide-2.jpg' %})">
+          <div class="car ousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown"></h2>
+              <p class="animate__animated animate__fadeInUp">
+                Office space is so much more than desks, white boards, and computers.
+                As a startup or SME, it’s your second home — it’s where you sow the seeds of your company's culture and it’s a part of your story as a founder.
+                HBF Connect Incubation has 7,50,000 sq. ft. of premium Service office space with partnership of space provider companies— the perfect place to grow your company.
+                You will get free support to get Professionals. 
+              </p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">ASK US HOW?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon icofont-simple-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon icofont-simple-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a> -->
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <!--<h2 style="color:red;">Connect195</h2-->
+            <h3 style="color:green;"><b>COMPANIES, WHAT YOU GET ACCESS TO:-</b></h3>
+            <ul>
+            <li><i class="ri-check-double-line"></i> <p>The world&#39;s fastest growing pool of experienced freelance sales experts</p></li>
+              <li><i class="ri-check-double-line"></i> <p>Save huge amount on hiring and training</p></li>
+              <li><i class="ri-check-double-line"></i> <p>More than just another basic job site- Everything you need to connect, train, manage
+                and pay your new sales partners easily</p></li>
+          </ul>
+          </div>
+          <div class="col-lg-6" >
+            <!--<h1>&nbsp;</h1-->
+            <h3 style="color:green;"><b>SALES FREELANCERS, WHAT YOU GET ACCESS TO:-</b></h3> 
+            <ul>
+              <li><i class="ri-check-double-line"></i> <p>The world&#39;s fastest growing database of top vetted companies globally</p></li>
+              <li><i class="ri-check-double-line"></i> <p>Build and easily manage your ultimate sales portfolio all in one place</p></li>
+              <li><i class="ri-check-double-line"></i> <p>Get paid on time, every time and apply for multiple opportunities</p></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Clients Section ======= -->
+
+    <div class="container">
+      <div class="section-title">
+        <h2 style="color:red;">company</h2>
+        <p>GREAT COMPANIES ONBOARD WITH US</p>
+      </div>
+    </div>
+
+    <section id="clients" class="clients section-bg">
+      <div class="container">
+
+       <div class="row">
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'assets/img/clients/1.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'assets/img/clients/2.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'assets/img/clients/3.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'assets/img/clients/4.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'assets/img/clients/5.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'assets/img/clients/6.png' %}" class="img-fluid" alt="">
+          </div><br><br>
+
+      </div>
+    </section><!-- End Clients Section -->
+    
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+        </div>
+        <center><h1>The only <b><u style="color: red;">All in One</u></b> Solutions</h1>
+        <p><b>The easiest way for companies and sales freelancers to connect and manage successful
+          working partnerships globally</b></p>
+        </center>
+        <h4>what we offer:-</h4>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="icon-box">
+              <i class="icofont-computer"></i>
+              <h4><a href="#">Connect</a></h4>
+              <p>Our team of expert help you to build website and mobile application to reach more customers.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="icofont-chart-bar-graph"></i>
+              <h4><a href="#">Manage</a></h4>
+              <p>We help that how to start your business. Provide all kind of basic support to starting a business. Our expert start helping you from basic steps.</p>
+             </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="icofont-calculator"></i>
+              <h4><a href="#">Collaborate</a></h4>
+              <p>We provide professional support to complete all kind of accounting and compliance's work. Our connected CA firms support entrepreneurs all over India.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="icofont-lawyer"></i>
+              <h4><a href="#">Sales Pipeline</a></h4>
+              <p>We help you to get free legal advisory with a team of corporate lawyers.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="icofont-tasks"></i>
+              <h4><a href="#">Training</a></h4>
+              <p>we help entrepreneur and their team to grow, we provide training to all of them.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="icofont-tasks"></i>
+              <h4><a href="#">Performance Tracking</a></h4>
+              <p>Provide consultancy to Company to launch their IPO. help them to raise funding.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="icofont-money"></i>
+              <h4><a href="#">Payment</a></h4>
+              <p>we help entrepreneur and their team to grow, we provide training to all of them.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="icofont-support"></i>
+              <h4><a href="#">Support</a></h4>
+              <p>Provide consultancy to Company to launch their IPO. help them to raise funding.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Services Section -->
+
+    <section id="search" name="search">
+      <div class="container-fluid" style="background-color: rgb(179, 240, 240); padding-top: 7%;">
+        <h1 style="margin-left:28%; margin-top: -5%;">Search for opportunities:</h1>
+        <div class="row" style="margin-left:28%; padding-bottom: 1%;">
+          <div col-lg-3 col-md-4 col-sm-6>
+            <div class="form-group">
+              <input type="email" class="form-control" id="email" placeholder="Key word" name="Key word">
+            </div>
+          </div>
+
+          <div col-lg-3 col-md-4 col-sm-6>
+            <div class="form-group">
+              <input type="email" class="form-control" id="email" placeholder="Company" name="Company">
+            </div>
+          </div>
+
+          <div col-lg-3 col-md-4 col-sm-6>
+            <div class="form-group">
+              <input type="email" class="form-control" id="email" placeholder="Industry" name="Industry">
+            </div>
+          </div>
+          <div col-lg-3 col-md-4 col-sm-6>
+            <div class="button">
+              <button type="button" class="btn btn-danger">Search</button>
+            </div>
+          </div>
+        </div>
+        <p style="margin-left: 19%; padding-bottom: 2%; font-size: x-large;">TOP INDUSTRIES: Information Technology & Services | Computer Software | Marketing & Advertising</p>
+      </div>
+    </section>
+
+    <section id="details" name="details">
+      <div class="container-fluid" style="margin-top: -9%;"> 
+        <div class="row" style="margin-left: 23%;">
+          <div col-lg-4 col-md-4 col-sm-6 style="padding:7%">
+            <img src="{% static 'assets/img/services/pic1.png' %}" > 
+          </div>
+          <div col-lg-4 col-md-4 col-sm-6 style="padding:7%">
+            <img src="{% static 'assets/img/services/pic2.png' %}"> 
+          </div>
+          <div col-lg-4 col-md-4 col-sm-6 style="padding:7%">
+            <img src="{% static 'assets/img/services/pic1.png' %}"> 
+          </div>
+        </div>
+
+        <div class="row">
+          <div col-lg-6 style="margin-left: 10%;">
+            <img src="{% static 'assets/img/services/pic3.png' %}" > 
+            </div>     
+          <div col-lg-6 style="padding-left: 60%; margin-top:-23%; margin-right: 10%;">
+            <h1>We've helped 1616 companies connect with sales agents..and counting...</h1>
+            <p>Our members mean the world to us and our focus is and will always be on quality over quantity. 
+              You'll only ever find highly experienced independent sales reps and top vetted companies on CommissionCrowd.
+               We invite you to join us on our epic journey to the top.</p>
+            <p>"We love CommissionCrowd because you really do represent the first innovation in staffing, recruiting and commission sales people we have seen. 
+              I honestly think you are modernizing the way of the old "manufacturers sales rep" that is long overdue and MUCH needed."</p>   
+            </div>
+          </div>
+
+          <div class="row">
+            <div col-lg-6 col-md-6 col-sm-6 style="padding-left:10%; margin-right:55%;">
+              <h1>We're growing FAST! Live stats: 16138 experienced commission-only sales agents from all over the world</h1>
+              <p class="jumbotron">"We love CommissionCrowd because you really do represent the first innovation in staffing, recruiting and commission sales people we have seen. 
+                I honestly think you are modernizing the way of the old "manufacturers sales rep" that is long overdue and MUCH needed."</p>
+              </div>      
+            <div col-lg-6 col-md-6 col-sm-6 style="margin-left: 55%; margin-top:-23% ;">
+                <img src="{% static 'assets/img/services/pic4.png' %}" > 
+              </div>
+            </div>
+            
+            <div class="row">
+              <div col-lg-5 col-md-6 col-sm-6 style="margin-left: 5%;">
+                <img src="{% static 'assets/img/services/pic5.png' %}" > 
+                </div>     
+              <div col-lg-5 col-md-6 col-sm-6 style="padding-left: 60%; margin-top:-23%; margin-right: 10%;">
+                  <h1>Join the No.1 award winning platform for the independent sales industry</h1>
+                  <p class="jumbotron">"As a commission-only sales agent I have registered on three other "job" sites but was delighted to find that CommissionCrowd is 
+                    inherently unique! I have found it to exceed my expectations in terms of the operational usability. In addition to the comprehensive 
+                    ability to search for opportunities, it also contains several other useful tools to help me manage my freelance sales business activity."
+                  </p>
+                  <p></p> 
+                </div>
+              </div>      
+            </div>
+          </section>
+ 
+    <section id="counts" class="counts">
+      <div class="container">
+        <h1 align="center"><b>Our Work</b></h1><br>
+        <div class="row gy-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box" style="background-color: #efe7e7;">
+              <i class="bi bi-emoji-smile"></i>
+              <div>
+
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter" style="color: black;">32</span>
+                <p><b>Total Product $ Services Listed</b></p>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box" style="background-color:#efe7e7;">
+              <i class="bi bi-journal-richtext" style="color: #ee6c20;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter" style="color: black;">40</span>
+                <p><b>Total Sales Agents Worldwide</b></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box" style="background-color:#efe7e7;">
+              <i class="bi bi-headset" style="color: #15be56;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter" style="color: black;">55</span>
+                <p><b>Total Companies Listed</b></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box" style="background-color:#efe7e7;">
+              <i class="bi bi-people" style="color: #bb0852;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="285" data-purecounter-duration="1" class="purecounter" style="color: black;">66</span>
+                <p><b>Total Clients Closed</b></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Partnership Section ======= -->
+    <!--customer stories-->
+    <section id="customer" class="customer">
+      <div class="container">
+            <h3 align="center"><b>When over <b style="color: blue;">1614</b> companies pay to be part of something new and innovative and then rave about the results... 
+              you can't blame us for bragging a little.</b></h3><br><br>
+            <div class="row">
+              <div class="col-lg-4 col-md-6">
+                <img src="{% static 'assets/img/clients/1.png' %}" class="img-responsive" alt=""><br><br>
+                <p>"In Nov 2015 SoPro listed our business profile, sales proposition and commission package on the Connect195 platform.
+                   In three weeks we contracted with two high calibre</p>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <img src="{% static 'assets/img/clients/2.png' %}" class="img-responsive" alt=""><br>
+                <p>"Connect195's model really appealed to us since we need to build a global team that can work effectively and still be flexible. 
+                  We've noticed the agents signed up at Connect195 have</p>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <img src="{% static 'assets/img/clients/3.png' %}" class="img-responsive" alt=""><br><br>
+                <p>"Connect195 is a great platform to expand your remote sales force quickly and efficiently. 
+                  The overall quality of the sales agents is great, we've had good responsiveness out of the agents</p>
+              </div>
+            </div><br><br>
+            <div class="row">
+              <div class="col-lg-4 col-md-6">
+                <img  src="{% static 'assets/img/clients/4.png' %}" class="img-responsive" alt=""><br><br>
+                <p>"In Nov 2015 SoPro listed our business profile, sales proposition and commission package on the Connect195 platform.
+                  In three weeks we contracted with two high calibre</p>
+             </div>
+             <div class="col-lg-4 col-md-6">
+              <img src="{% static 'assets/img/clients/5.png' %}" class="img-responsive" alt=""><br>
+               <p>"Commissi's model really appealed to us since we need to build a global team that can work effectively and still be flexible. 
+                 We've noticed the agents signed up at CommissionCrowd have</p>
+             </div>
+             <div class="col-lg-4 col-md-6">
+              <img src="{% static 'assets/img/clients/6.png' %}" class="img-responsive" alt="">
+               <p>"CommissionCrowd is a great platform to expand your remote sales force quickly and efficiently. 
+                 The overall quality of the sales agents is great, we've had good responsiveness out of the agents</p>
+              </div>
+            </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <h1 align="center"><u><b style="color: crimson;">Join The Win/Win Sales Economy</b></u></h2>
+          <h3 align="center"><b>Where the world's best independent sales professionals and companies come together</b></h3>
+          <p align="center">Leading the way forward in the evolution of the independent sales industry</p>
+        <div class="row content">
+          <iframe title="vimeo-player" src="https://www.youtube.com/embed/y8dBDCc-cjk " width="50%" height="400" frameborder="0" allowfullscreen style="margin-left: 25%;"></iframe>
+        </div><br>
+        <p align="center">Imagine a game-changing online platform that makes it simple for B2B self-employed sales agents and top companies to find each other,
+           work together, effortlessly manage your partnerships and eliminate all of the mundane tasks that take your time away from selling. 
+           Welcome to the home of independent, commission-only sales. Welcome to CommissionCrowd.
+        </p>
+      </div>
+    </section>
+    <!-- <section id="partnership" class="partnership">
+      <div class="container">
+        <centre>
+          <h2 style='font-size: 150%;'>Be our Partners</h2>
+          <h4>  We’re all about growth at HBF Connect and are constantly looking for partners in this journey. </h4>
+        </centre>
+        <div class='box'>
+          <div class="col1">
+              <div>Space Partner</div>
+              <h3>
+                If you own a space and want to explore partnering with us,
+                give us your details and we’ll get in touch with you shortly.
+              </h3>
+          </div>
+          <div class="col2">
+            <div class='box1'>
+              <div>Coworking Partner</div>
+              <h3>
+                Convert your Co-working space or Managed office space into HBF
+                Connect Incubation Centre where you can support entrepreneurs in your area 
+                and you can provide our free support to entrepreneurs.
+              </h3>
+            </div>
+            </div>
+          <div class="col3">
+            <div class='box2'>
+              <div>Professional Partner</div>
+              <h3>
+                Connecting with professionals like CA, CS, Lawyers those are ready to provide
+                services in our incubation centres spread across multiple cities.
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>End Partnership Section -->
+    {% endblock %}
+
+
+  

@@ -1,0 +1,168 @@
+{% extends 'adminpanel/base.html' %}
+{% load static %}
+{% block content %}
+<div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-header-primary">
+              <h6 class="card-title ">Opportunity</h6>
+              <p class="card-category"> Here is a subtitle for this table</p><br/>
+            </div>
+          </div>
+        </div>
+      </div>
+            <div class="row">
+              <div class="col-md-3 col-sm-3">
+                <div class="card bg-info text-white">
+                  <div class="card-body">Advance Search</div>                      
+                </div>
+                    <form action="{% url 'opportunities' %}" method="GET">
+                    {% csrf_token %}
+                <div class="form-group">
+                  <select name="industries"  class="custom-select form-control mb-3">
+                    <optgroup label="Industries">
+                        <option value="">Industries</option>
+                        <option value="">Accunting</option>
+                        <option value="">Automotive</option>
+                        <option value="">Capital market</option>
+                        <option value="">Real state</option>
+                        </select>
+                  <select name="company" class="custom-select form-control mb-3">
+                        <option value="">Company</option>
+                        <option value="">Computer game</option>
+                        <option value="">Hardware</option>
+                        <option value="">Software</option>
+                        <option value="">Design</option>
+                        </select>
+                  <select name="Country" class="custom-select form-control mb-3">
+                       `<option value="">Country</option>
+                        <option value="">India</option>
+                        <option value="">Australia</option>
+                        <option value="">America</option>
+                        <option value="">Dubai</option>
+                        </select>
+                  <select name="Business_Type" class="custom-select form-control mb-3">
+                        <option value="">Business Type</option>
+                        <option value="">B2B</option>
+                        <option value="">B2C</option>
+                        <option value="">B2B And B2C</option>
+                        </select>
+                  <select name="Commission" class="custom-select form-control mb-3">
+                        <option value="">Commission %</option>
+                        <option value="">10%</option>
+                        <option value="">20%</option>
+                        <option value="">30%</option>
+                        <option value="">40%</option>
+                        </select>
+                  <select name="Other" class="custom-select form-control mb-3">
+                        <option value="">Other</option>
+                        <option value="">Ipo</option>
+                        <option value="">Fundraise</option>
+                        <option value="">Sme</option>
+                        <option value="">Roadmap</option>
+                        </select>
+                  <button type="submit" class="btn btn-success lg-btn ">Search</button>
+                  </form>
+                </div>
+              </div>
+
+
+              <div class="col-sm-9 col-lg-9" >
+                <div class="col-md-6 col-sm-6 py-5">
+                  <ul class="nav nav-tabs">
+                  <li class="active"><a data-toggle="tab"  href="#demo">All</a></li>
+                  <li ><a data-toggle="tab"  href="#demo1">Most recent</a></li>
+                  <li ><a data-toggle="tab"  href="#demo2">Popular</a></li>
+                  </ul>
+                </div>
+                <div class="tab-content">
+                <div id="demo" class="tab-pane in active">
+                {% for company in companydetails %}
+                <div class="card" style="padding: 8px;">
+                  <div class="row">
+                  <div class="col-md-2 col-lg-4">
+                  <img class="card-img-top" src="{{company.upload_logo.url}}" alt="Card image" style="height: 97%;width: 94%;">
+                  </div>
+                  <div class="col-md-8 col-lg-6">
+                    <h4 class="mt-1" style="color:rgb(42, 130, 207)">{{company.industry}}</h4>
+                    <h5 class="mt-1">{{company.company.company}}</h5> 
+                    <h5 class="mt-1">{{company.company.contact}}</h5>
+                    <h5 class="mt-1">{{company.company.country}}</h5>
+                    {% for finance in financial %}
+                    {% ifequal finance.company.email company.company.email %}
+                      <h5 class="mt-1">{{ finance.title }}</h5>
+                      <h4 class="mt-1"><b style="color: rgb(209, 43, 224);" >{{finance.commission}}</b>,<b style="color: rgb(51, 76, 223);" >{{finance.our_industry}}</b>,<b style="color: rgb(223, 99, 61);" >{{finance.selling_method}}</b></h4>
+                    {% endifequal %}
+                    {% endfor %}
+                  </div>
+                  <div class="col-md-2 col-lg-2 pt-5">
+                    <a href="{% url 'companydetails' company.company.id %}" class="btn btn-primary">See Profile</a>
+                </div>
+                </div>
+              </div> 
+                {% endfor %}
+              </div>
+
+              <div id="demo1" class="tab-pane">
+                {% for company in companydetails %}
+                {% ifequal company.company.country "dubai" %}
+                <div class="card" style="padding: 8px;">
+                  <div class="row">
+                  <div class="col-sm-2 col-lg-4">
+                  <img class="card-img-top" src="{{company.upload_logo.url}}" alt="Card image" style="height: 97%;width: 94%;">
+                  </div>
+                  <div class="col-sm-8 col-lg-6">
+                    <h4 class="mt-1" style="color:rgb(42, 130, 207)">{{company.industry}}</h4>
+                    <h5 class="mt-1">{{company.company.company}}</h5> 
+                    <h5 class="mt-1">{{company.company.contact}}</h5>
+                    <h5 class="mt-1">{{company.company.country}}</h5>
+                    {% for finance in financial %}
+                    {% ifequal finance.company.email company.company.email %}
+                      <h5 class="mt-1">{{ finance.title }}</h5>
+                      <h4 class="mt-1"><b style="color: rgb(209, 43, 224);" >{{finance.commission}}</b>,<b style="color: rgb(51, 76, 223);" >{{finance.our_industry}}</b>,<b style="color: rgb(223, 99, 61);" >{{finance.selling_method}}</b></h4>
+                    {% endifequal %}
+                    {% endfor %}
+                  </div>
+                  <div class="col-sm-2 col-lg-2 pt-5">
+                    <a href="{% url 'companydetails' company.company.id %}" class="btn btn-primary">See Profile</a>
+                </div>
+                </div>
+              </div>
+              {% endifequal %}
+              {% endfor %}
+              </div>
+
+              <div id="demo2" class="tab-pane">
+                {% for company in data %}
+                <div class="card" style="padding: 8px;">
+                  <div class="row">
+                  <div class="col-sm-2 col-lg-4">
+                  <img class="card-img-top" src="{{company.upload_logo.url}}" alt="Card image" style="height: 97%;width: 94%;">
+                  </div>
+                  <div class="col-sm-8 col-lg-6">
+                    <h4 class="mt-1" style="color:rgb(42, 130, 207)">{{company.industry}}</h4>
+                    <h5 class="mt-1">{{company.company.company}}</h5> 
+                    <h5 class="mt-1">{{company.company.contact}}</h5>
+                    <h5 class="mt-1">{{company.company.country}}</h5>
+                    {% for finance in financial %}
+                    {% ifequal finance.company.email company.company.email %}
+                      <h5 class="mt-1">{{ finance.title }}</h5>
+                      <h4 class="mt-1"><b style="color: rgb(209, 43, 224);" >{{finance.commission}}</b>,<b style="color: rgb(51, 76, 223);" >{{finance.our_industry}}</b>,<b style="color: rgb(223, 99, 61);" >{{finance.selling_method}}</b></h4>
+                    {% endifequal %}
+                    {% endfor %}
+                  </div>
+                  <div class="col-sm-2 col-lg-2 pt-5">
+                    <a href="{% url 'companydetails' company.company.id %}" class="btn btn-primary">See Profile</a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>   
+      </div>
+    </div>  
+  </div>
+</div>  
+{%endblock%}

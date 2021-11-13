@@ -1,0 +1,271 @@
+{% extends 'adminpanel/base.html' %}
+{% load static %}
+{% block content %}
+<style>
+  #myCon{
+    display:none;
+  }
+  #myOrg{
+    display: none;
+  }
+</style>
+
+<section id="leads">
+<div class="container-fluid" style="margin-top: 10%;">
+    <!-- <div class="dropdown">
+        <button class="btn btn-info dropdown-toggle" type="button" style="float: right; margin-top: -5%;" data-toggle="dropdown">Status
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Idea</a></li>
+          <li><a href="#">Contacted</a></li>
+          <li><a href="#">Discovery</a></li>
+          <li><a href="#">Presentation</a></li>
+          <li><a href="#">Closed</a></li>
+        </ul>
+      </div> -->
+      <!-- <div class="dropdown">
+        <button class="btn btn-info dropdown-toggle" type="button" style="margin-left: 79%; margin-top: -8%;" data-toggle="dropdown">Status</button>
+        <ul class="dropdown-menu">
+          <li><a href="#">OPEN</a></li>
+          <li><a href="#">CLOSED</a></li>
+          <li><a href="#">LOST</a></li>
+          <li><a href="#">FOLLOW UP</a></li>
+          <li><a href="#">Pending</a></li>
+        </ul>
+      </div>   -->
+        <div class="row">
+          <div class="col-md-12">
+            {% if messages %}
+            <ul class="messages">
+          {% for message in messages %}
+            <span class="alert alert-success"> {{ message }} </span>
+          {% endfor %}
+            </ul>
+          {% endif %}
+          </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 ">
+        <div class="jumbotron" style="background-color: rgb(38, 119, 119);">
+          <div class="card bg-secondary text-white">
+            <div class="card-body text-uppercase"><b class="text-dark">Lead Name:</b> {{lead.name}}</div>                      
+          </div>
+          <form action="{% url 'leadaction' %}" method="POST">
+            {% csrf_token %}
+            <input type="text" class="form-control" id="leadactionid" name="leadactionid" value="{{lead.id}}" hidden>
+                <div class="form-group">
+                  <label for="email">Value ($)</label>
+                  <input type="text" class="form-control" id="Value" name="value" value="{{leadaction.Value}}" required>
+                </div>
+              <div class="form-group">
+                  <label for="pwd">Confidence (%)</label>
+                  <input type="text" class="form-control" id="Confidence" name="confidence" value="{{leadaction.Confidence}}" required>
+                </div>
+              <div class="form-group">
+                    <label for="pwd">Estimated close</label>
+                    <input type="date" class="form-control" id="est_close" name="est_close" value="{{leadaction.Estimated_close}}" required>
+              </div>
+                <button type="submit" value="submit" class="btn btn-info btn-outline">Update</button>
+              </form>
+          </div>
+        <div class="jumbotron" style="background-color: rgb(38, 119, 119);">
+          <div class="container">
+            <button type="button" class="btn btn-info" onClick="showcon()">+New contact</button>
+            <div id="myCon">
+              <div>
+                <div class="modal-content">
+                  <form action="{% url 'leadcontact'%}" method="POST">
+                    {% csrf_token %}
+                  <div class="modal-body">
+                    <input type="text" class="form-control" id="leadactionid" name="leadactionid" value="{{lead.id}}" hidden>
+                    <div class="form-group">
+                      <label class="sr-only" for="name">Lead Name</label>
+                      <input type="text" class="form-control" id="leadname" placeholder="Lead Name" name="leadname"required >
+                    </div>
+                    <div class="form-group">
+                      <label class="sr-only" for="job">Job Title</label>
+                      <input type="text" class="form-control" id="Job" placeholder="Job Title" name="job" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="sr-only" for="phone">Phone or Email</label>
+                      <input type="text" class="form-control" id="email" placeholder="Phone or Email" name="email">
+                    </div>
+                    <div class="form-group">
+                      <label class="sr-only" for="contact">Contact Name</label>
+                      <input type="text" class="form-control" id="contact" placeholder="Contact Name" name="contact">
+                    </div>                  
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" name="submit" class="btn btn-success" data-dismiss="modal">Add</button>
+                    <button type="" class="btn btn-primary" data-dismiss="modal" >Cancel</button>
+                  </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% for contact in contact %}                      
+          <div class="container">
+            <button type="button" class="btn btn-primary btn-outline" data-toggle="collapse" data-target="#{{contact.id}}">{{contact.lead_name}}</button>
+            <div id="{{contact.id}}" class="collapse">
+              <ul class="list-group">
+                <li class="list-group-item"> {{contact.job_title}}</li>
+                <li class="list-group-item">{{contact.email}}</li>
+                <li class="list-group-item">{{contact.contact}}</li>
+              </ul>
+            </div>
+          </div>
+          {% endfor %}    
+        </div>
+        <div class="jumbotron" style="background-color: rgb(38, 119, 119);">
+          <div class="container">
+            <button type="button" class="btn btn-info" onclick="showOrg()">+New organisation</button>
+            <div id="myOrg">
+              <div>
+                <div class="modal-content">
+                  <form action="{% url 'leadorganisation'%}" method="POST">
+                    {% csrf_token %}
+                  <div class="modal-body">
+                    <input type="text" class="form-control" id="leadactionid" name="leadactionid" value="{{lead.id}}" hidden>
+                    <div class="form-group">
+                      <label class="sr-only" for="phone">Phone or Email</label>
+                      <input type="text" class="form-control" id="email" placeholder="Phone or Email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="sr-only" for="contact">Organisation Name</label>
+                      <input type="text" class="form-control" id="contact" placeholder="Contact Name" name="contact" required>
+                    </div> 
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" name="submit" class="btn btn-success" data-dismiss="modal">Add</button>
+                    <button type="reset" name="reset" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                  </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>                      
+          {% for organisation in organisation %}                      
+          <div class="container">
+            <button type="button" class="btn btn-primary btn-outline" data-toggle="collapse" data-target="#{{organisation.email}}">{{organisation.email}}</button>
+            <div id="{{organisation.email}}" class="collapse">
+              <ul class="list-group">
+                <li class="list-group-item">{{organisation.email}}</li>
+                <li class="list-group-item">{{organisation.contact}}</li>
+              </ul>
+            </div>
+          </div>
+          {% endfor %}    
+        </div>
+    </div>
+        <div class="col-lg-8 col-md-6 col-sm-6 ">
+            <ul class="nav nav-tabs">
+              <li class="active"><a data-toggle="tab" href="#home">Add a Note<i class="fas fa-arrow-circle-up"></i></a></li>
+              <li><a data-toggle="tab" href="#menu1">E-mail</a></li>
+              <li><a data-toggle="tab" href="#menu2">Add a Task</a></li>
+            </ul>
+            <div class="tab-content">
+              <div id="home" class="tab-pane in active">
+                <form action="{% url 'note' %}" method="POST">
+                  {% csrf_token %} 
+                <div class="form-group">
+                  <input type="text" class="form-control" id="leadactionid" name="leadactionid" value="{{lead.id}}" hidden>
+                  <label for="comment">Add a Note</label>
+                  <textarea class="form-control" rows="5" id="note" name="note"></textarea>
+                </div>
+                <button class="btn btn-success" type="submit" name="save">Save</button>
+              </form>
+              </div>
+              <div id="menu1" class="tab-pane ">
+                <h3>Send an E-mail</h3>
+                  <div class="form-group">
+                    <label for="inputdefault">From:</label>
+                    <input class="form-control" id="inputdefault" type="text">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputdefault">To:</label>
+                    <input class="form-control" id="inputdefault" type="text">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputdefault">Subject line</label>
+                    <input class="form-control" id="inputdefault" type="text">
+                  </div>
+                <button type="button" class="btn btn-success">+Attatch file</button>
+                <div class="form-group">
+                  <label for="comment">Add a note</label>
+                  <textarea class="form-control" rows="5" id="comment"></textarea>
+                </div>
+              </div>
+                <div id="menu2" class="tab-pane ">
+                <form action="{% url 'tasksave' %}" method="POST">
+                    {% csrf_token %} 
+                <h3>Add a Task</h3>
+                  <input class="form-control" id="leadid" name="leadid" type="text" value="{{lead.id}}" hidden>
+                  <div class="form-group">
+                    <label for="inputdefault">Task title</label>
+                    <input class="form-control" id="tasktitle" name="tasktitle" type="text" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="comment">Description</label>
+                    <textarea class="form-control" rows="5" id="comment" name="comment" required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputdefault">Due date</label>
+                    <input class="form-control" id="date" name="date" type="date" required>
+                  </div>
+                <button class="btn btn-success" type="submit" name="submit">Add</button>
+              </div>
+            </form>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="border-right">
+                  <div class="card bg-info text-white">
+                    <div class="card-body">Activity</div>                      
+                  </div>
+                <ul class="nav nav-tabs">
+                  <li class="active"><a data-toggle="tab" href="#all">All</a></li>
+                  <li><a data-toggle="tab" href="#E-mail">E-mail</a></li>
+                  <li><a data-toggle="tab" href="#Notes">Notes</a></li>
+                </ul>
+                <div class="tab-content">
+                  <div id="all" class="tab-pane active">
+                    {% for note in note %}
+                    <small class="text-info">Notes</small>
+                    <h5 class="pt-5">{{note.created_on}}</h5>
+                    <p>{{note.note}}</p><hr/>
+                    {% endfor %}
+                    <small class="text-info">Email</small> 
+                    <p class="pt-1">Lead status change</p>
+                    <p class="pt-1">[Closed Follow up]</p>
+                  </div>
+                  <div id="E-mail" class="tab-pane">
+                    <h5 class="pt-5">20 July 2021 at 12:24 PM</h5>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  </div>
+                  <div id="Notes" class="tab-pane">
+                    {% for note in note %}
+                    <h5 class="pt-5">{{note.created_on}}</h5>
+                    <p>{{note.note}}</p><hr/>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-6">
+                <div class="card bg-info text-white">
+                  <div class="card-body">Tasks</div>                      
+                </div>
+                <div class="jumbotron">                
+                {% for data in data %}
+                  <input type="text" name="dataid" value="{{data.id}}" hidden="hidden">
+                  <h5 class="pt-5"> DUE ON:{{data.Due_date}}<b>{{data.Description}}</b></h5>
+                  <h5 class="pt-5">add a task from<b> {{data.Task_title}}</b></h5><hr/>
+                {% endfor %}
+              </div>
+            </div>
+          </div>     
+        </div>
+        </div>
+      </div>
+    </section>
+    
+{% endblock %}

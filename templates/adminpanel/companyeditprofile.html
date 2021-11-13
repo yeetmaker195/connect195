@@ -1,0 +1,89 @@
+{% extends 'adminpanel/companybase.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid rounded bg-white mt-5 mb-5">
+    <form action="{% url 'companyaddeditprofile' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+    <div class="row">
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" style="height: 100%;width: 100%;" src="{{agent_details.upload_logo.url}}"><span class="font-weight-bold">{{data.name}}</span><span class="text-black-50">{{ request.session.email }}</span><span> </span></div>
+        </div>
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center ">
+                    <div class="card bg-primary text-white">
+                        <div class="card-body">Profile Settings</div>                      
+                      </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">Name</label><input type="text" name="name" class="form-control" placeholder="" value="{{data.name}}"></div>
+                    <div class="col-md-6"><label class="labels">Surname</label><input type="text" name="surname" class="form-control" value="{{data.name}}"></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12"><label class="labels">Years of experience:</label><input type="text" name="years_of_exp" class="form-control" value="{{agent_details.years_of_exp}}"></div>
+                    <div class="col-md-12"><label class="labels">Address</label><input type="text" name="address" class="form-control" value=""></div>
+                    <div class="col-md-12"><label class="labels">Email ID</label><input type="text" name="email" class="form-control" value="{{data.email}}"></div>
+                    <div class="col-md-12"><label class="labels">Mobile no</label><input type="text" name="contact" class="form-control" value="{{data.contact}}"></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6"><label class="labels">Country</label><input type="text" name="country" class="form-control" value="{{data.country}}"></div>
+                    <div class="col-md-6"><label class="labels">Company</label><input type="text" name="company" class="form-control" value="{{data.company}}"></div>
+                    <div class="col-md-6"><label class="labels">State/Region</label><input type="text" name="state" class="form-control" value="{{agent_details.what_city_based_in}}"></div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="card bg-primary text-white">
+                        <div class="card-body">Basic information about your Company</div>                      
+                      </div>
+                    <div class="col-md-12"><label class="labels">Industry:</label><input type="text" name="Industry" class="form-control"  value="{{agent_details.industry}}"></div>
+                    <div class="col-md-12"><label class="labels">Company Size:</label>
+                        <select name="company_size" class="custom-select mb-3">
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="25">25</option>
+                            <option value="other">other</option></select></div>
+                    <div class="col-md-12"><label class="labels">Years Traiding:</label><input type="text" name="Years_Traiding" class="form-control"  value="{{agent_details.years_traiding}}"></div>
+                    <div class="col-md-12"><label class="labels">No of Customer:</label>
+                        <select name="no_of_customer" class="custom-select mb-3">
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="25">25</option>
+                            <option value="other">other</option></select></div>
+                    <div class="col-md-12"><label class="labels">What city or region are you based in?</label><input type="text" name="what_city_based_in" class="form-control"  value="{{agent_details.what_city_based_in}}"></div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="card bg-primary text-white">
+                        <div class="card-body">Contact details & social media</div>                      
+                      </div>
+                    <div class="col-md-12"><label class="labels">skype:</label><input type="text" name="skype" class="form-control"  value="{{agent_details.skype}}"></div>
+                    <div class="col-md-12"><label class="labels">website:</label><input type="text" name="web_site" class="form-control"  value="{{agent_details.web_site}}"></div>
+                    <div class="col-md-12"><label class="labels">LinkedIn URL:</label><input type="text" name="linkedin" class="form-control" value="{{agent_details.linkedin_url}}"></div>
+                    <div class="col-md-12"><label class="labels">Facebook URL:</label><input type="text" name="facebook" class="form-control" value="{{agent_details.facebook_page_url}}"></div>
+                    <div class="col-md-12"><label class="labels">Twitter URL:</label><input type="text" name="twitter" class="form-control" value="{{agent_details.twitter_id}}"></div>
+                </div>              
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-primary text-white">
+                <div class="card-body">short summary</div>                      
+            </div>
+                <textarea name="short_summary" rows="10" cols="30"></textarea>
+                <br><br>
+                <div class="card bg-primary text-white">
+                    <div class="card-body">About Your Company</div>                      
+                </div>
+                <textarea name="about_company" rows="10" cols="30"></textarea>
+                <br><br>
+            </div>
+        </div>
+        <div class="text-center">
+        <button class="btn btn-primary" type="submit" name="submit">Save Profile</button></div>
+    </form>
+</div>
+{%endblock%}

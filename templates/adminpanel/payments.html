@@ -1,0 +1,244 @@
+{% extends 'adminpanel/base.html' %}
+{% load static %}
+{% block content %}
+<style>
+  .btn.btn-lg, .btn-group-lg>.btn, .btn-group-lg .btn {
+    padding: 1.125rem 2.25rem;
+    font-size: 1.875rem;
+    line-height: 1.333333;
+    border-radius: 0.2rem;
+}
+</style>
+<br/><br/><br/><br/><br/><br/><br/>
+<div class="container-fluid">
+    <div class="container-fluid">
+        <button type="button" class="btn btn-info btn-lg text-dark" data-toggle="modal" data-target="#myModal" style="float: right;"><b>Generate New Invoice</b></button>
+    <div id="myModal" class="modal" role="dialog">
+      <div class="modal-dialog modal-lg">
+    
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Create your commissions invoice</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-12 col-lg-12">
+                <form action="{% url 'invoice' %}" method="POST">
+                  {% csrf_token %}
+                <div class="form-group">
+                  <label for="email">Opportunity:</label>
+                  <input type="text" class="form-control" id="Opportunity" placeholder="Enter Your Opportunity" name="Opportunity">
+                </div>              
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4 col-md-6">
+                <div class="card bg-primary text-white">
+                  <div class="card-body">Your details</div>                      
+                </div>
+                    <div class="form-group">
+                      <label for="email">Invoice number:</label>
+                      <input type="text" class="form-control" id="Invoice" name="Invoice">
+                    </div>
+                    <div class="form-group">
+                      <label for="pwd">Your business name:</label>
+                      <input type="text" class="form-control" id="Your_business" name="Your_business">
+                    </div>
+                    <div class="form-group">
+                      <label for="pwd">Your business address line:</label>
+                      <input type="text" class="form-control" id="business_address" name="business_address">
+                    </div>
+                    <div class="form-group">
+                      <label for="pwd">Your business address line 2:</label>
+                      <input type="text" class="form-control" id="business_address2" name="business_address2">
+                    </div>
+                    <div class="form-group">
+                      <label for="pwd">Your business address city:</label>
+                      <input type="text" class="form-control" id="business_city" name="business_city">
+                    </div>
+                    <div class="form-group">
+                      <label for="pwd">Your business address state:</label>
+                      <input type="text" class="form-control" id="business_state" name="business_state">
+                    </div>
+                    <div class="form-group">
+                      <label for="pwd">Your business address country:</label>
+                      <input type="text" class="form-control" id="business_country"  name="business_country">
+                    </div>
+                    <div class="form-group">
+                      <label for="pwd">Your business address postal code:</label>
+                      <input type="text" class="form-control" id="business_code"  name="business_code">
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6">
+                    <div class="card bg-primary text-white">
+                      <div class="card-body">The company's details</div>                      
+                    </div>
+                  <div class="form-group">
+                    <label for="email"> Date:</label>
+                    <input type="date" class="form-control" id="Date" name="Date">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Your business name:</label>
+                    <input type="text" class="form-control" id="Your_business" name="Your_business">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Your business address line:</label>
+                    <input type="text" class="form-control" id="business_address" name="business_address">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Your business address line 2:</label>
+                    <input type="text" class="form-control" id="business_address2" name="business_address2">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Company business address city:</label>
+                    <input type="text" class="form-control" id="business_city" name="business_city">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Company address state:</label>
+                    <input type="text" class="form-control" id="business_state" name="business_state">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Company business address country:</label>
+                    <input type="text" class="form-control" id="business_country"  name="business_country">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Company business address postal code:</label>
+                    <input type="text" class="form-control" id="business_code"  name="business_code">
+                  </div>
+                    </div>
+
+                  <div class="col-lg-4 col-md-6">
+                    <div class="card bg-primary text-white">
+                      <div class="card-body">Settings</div>                      
+                    </div>
+                      <div class="form-group">
+                      <label for="email">Currency:</label>
+                      <input type="text" class="form-control" id="Currency" name="Currency">
+                    </div>
+                    <div class="form-group">
+                      <label for="pwd">Commission percentage:</label>
+                      <input type="text" class="form-control" id="Commission"  name="Commission">
+                    </div>
+                    <div class="form-group">
+                      <label for="pwd">Invoice due date:</label>
+                      <input type="date" class="form-control" id="Invoice_due"  name="Invoice_due">
+                    </div>
+                    <div class="row">
+                      <div class="container">
+                        <div class="card bg-primary text-white">
+                          <div class="card-body">Taxes</div>                      
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                          <div class="form-group">
+                            <label for="email">Tax name:</label>
+                            <input type="text" class="form-control" id="Tax_name" name="Tax_name">
+                          </div>
+                          </div>
+                          <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                              <label for="email">Tax percentage:</label>
+                              <input type="text" class="form-control" id="Tax_percentage" name="Tax_percentage">
+                            </div>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <div class="modal-footer">
+            <button type="submit" name="submit" id="submit" class="btn btn-success">Apply</button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">  
+    <div class="col-lg-12 col-md-12">
+      {% if messages %}
+            <ul class="messages">
+          {% for message in messages %}
+            <span class="alert alert-success"> {{ message }} </span>
+          {% endfor %}
+            </ul>
+          {% endif %} 
+    <div class="card">
+      <div class="card-header card-header-primary">
+        <h4 class="card-title">My Invoices</h4>
+        <p class="card-category"></p>
+      </div>
+    <div class="card-body table-responsive">
+      <table class="table table-hover">            
+          <thead class="text-warning">
+            <th>Invoice no</th>
+            <th>Company name</th>
+            <th>Date genareted</th>
+            <th>City</th>
+          </thead>
+          {% for inv in inv %}
+          <tbody>
+            <tr>
+              <td>{{inv.Invoice_number}}</td>
+              <td> {{inv.business_name}}</td>
+              <td>{{inv.created_on}}</td>
+              <td>{{inv.business_city}}</td>
+            </tr>
+          </tbody>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</div> 
+<div class="container-fluid">
+  <div class="row">  
+    <div class="col-lg-12 col-md-12">
+    <div class="card">
+      <div class="card-header card-header-info">
+        <h4 class="card-title">My Earnings</h4>
+        <p class="card-category"></p>
+      </div>
+    <div class="card-body table-responsive">
+      <table class="table table-hover">            
+          <thead class="text-warning">
+            <th>Opportunity</th>
+            <th>Status</th>
+            <th>Commission %</th>
+            <th>Earnings in INR</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Dakota Rice</td>
+              <td>$36,738</td>
+              <td>$36,738</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Minerva Hooper</td>
+              <td>$23,789</td>
+              <td>$36,738</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Sage Rodriguez</td>
+              <td>$56,142</td>
+              <td>$36,738</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Philip Chaney</td>
+              <td>$38,735</td>
+              <td>$36,738</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</div> 
+{% endblock %}

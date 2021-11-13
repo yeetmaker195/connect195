@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container">
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <h1 align="center" class="border bg-info text-dark"><b>OUR STORY</b></h1>
+        <h4 align="center" style="color:green"><b>connect195</b></h4><hr>
+
+        <div class="row entry bg-muted">
+
+          <div class="col-lg-6  col-md-6 d-flex align-items-stretch">
+            <article>
+
+              <div class="entry-img">
+                <!--<img src="{% static 'assets/img/insight/sales partner.jpg' %}" alt="" class="img-fluid"-->
+              </div>
+
+              <h2 class="entry-title">
+                <a href="{% url 'blog1' %}" style="color:red"><b>background:-</b></a><hr>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="{% url 'blog1' %}" style="color: green;">By connect195</a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="{% url 'blog1' %}"><time datetime="2020-08-29" style="color: green;">August 29, 2020</time></a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content text-info">
+                <p align="justify">
+                  Connect195 started in the midst of Covid-19 Pandemic. 
+                  It was a painful and struggling time for lot of talented professionals who lost their jobs and had no means to look for relevant work. 
+                  Also, a lot of companies were also facing issues for re-hiring after laying off many employees. 
+                </p>
+                <!--<div class="read-more">
+                  <a href="{% url 'blog1' %}">Read More</a>
+                </div-->
+              </div>
+
+            </article><!-- End blog entry -->
+          </div>
+          <div class="col-lg-6  col-md-6 d-flex align-items-stretch">
+            <article>
+
+              <div class="entry-img">
+                <!--<img src="{% static 'assets/img/insight/beginning.jpg' %}" alt="" class="img-fluid"-->
+              </div>
+
+              <h2 class="entry-title">
+                <a href="{% url 'blog2' %}" style="color:red"><b>BEGINNING:-</b></a><hr>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="{% url 'blog2' %}" style="color: green;">By connect195</a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="{% url 'blog2' %}"><time datetime="2020-08-29" style="color: green;">August 29, 2020</time></a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content text-info">
+                <p align="justify">
+                  The traditional HR processes that connected interested with companies were also inefficient and slow to 
+                  cope with the quickly changing scenarios and newly founded startups with varied job skills required by them. 
+                  Connect195 and its founding team took it upon them to find the inefficiencies in the current processes and remove 
+                  them to help more people find jobs quickly and also help companies to grow their business at a faster rate.
+                </p>
+                <!--<div class="read-more">
+                  <a href="{% url 'blog2' %}">Read More</a>
+                </div-->
+              </div>
+
+            </article><!-- End blog entry -->
+          </div>
+          <div class="col-lg-6  col-md-6 d-flex align-items-stretch">
+            <article>
+
+              <div class="entry-img">
+                <!--<img src="{% static 'assets/img/insight/process.jpg' %}" alt="" class="img-fluid"-->
+              </div>
+
+              <h2 class="entry-title">
+                <a href="{% url 'blog3' %}" style="color:red"><b>PROCESS:-</b></a><hr>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="{% url 'blog3' %}" style="color: green;">By connect195</a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="{% url 'blog3' %}"><time datetime="2020-08-29" style="color: green;">August 29, 2020</time></a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content text-info">
+                <p align="justify">
+                  Connect195 started by doing a market research to figure out the actual problems faced by companies and employees. 
+                  Based on that, our team figured out that there is a huge problem to fix in the market of sales for companies and a lot of business 
+                  development professionals who are either looking for work or working in a market which they don’t like. Our team was inspired to build a
+                   solution for t
+                  hem, so we started our working based on insights from our market research.
+                </p>
+                <!--<div class="read-more">
+                  <a href="{% url 'blog3' %}">Read More</a>
+                </div-->
+              </div>
+
+            </article><!-- End blog entry -->
+          </div>
+          <div class="col-lg-6  col-md-6 d-flex align-items-stretch">
+            <article>
+
+              <div class="entry-img">
+                <!--<img src="{% static 'assets/img/insight/product.jpg' %}" alt="" class="img-fluid"-->
+              </div>
+
+              <h2 class="entry-title">
+                <a href="{% url 'blog4' %}" style="color:red"><b>PRODUCT:-</b></a><hr>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="{% url 'blog4' %}" style="color: green;">connect195</a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="{% url 'blog4' %}"><time datetime="2020-08-29" style="color: green;">August 29, 2020</time></a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content text-info">
+                <p align="justify">
+                  Connect195 is a sales based platform which connects business development professionals
+                   looking for work with companies looking to sell their products. 
+                </p>
+                <!--<div class="read-more">
+                  <a href="{% url 'blog4' %}">Read More</a>
+                </div-->
+              </div>
+
+            </article><!-- End blog entry -->
+          </div>
+        </div>
+
+        <div class="blog-pagination" >
+          <ul class="justify-content-center">
+            <li class="disabled"><i class="icofont-rounded-left"></i></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#"><i class="icofont-rounded-right"></i></a></li>
+          </ul>
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+  </main><!-- End #main -->
+
+  {% endblock %}

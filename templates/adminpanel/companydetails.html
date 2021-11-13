@@ -1,0 +1,188 @@
+{% extends 'adminpanel/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- <style>
+    #myModal{
+    display: none;
+}
+    #myask{
+    display: none;
+} -->
+</style>
+<div class="container-fluid"></br></br></br>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="jumbotron" style="background-color: rgb(214, 211, 206); margin-left: 5%;">
+            <p style="color: blue; font-family: cursive;" >{{financialtc.title}}</p>
+            <img class="img-responsive,mt-5" src="{{ data.upload_logo.url }}" alt="pic" width="50%" >          
+          </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="jumbotron" style="background-color: rgb(224, 217, 208);margin-left: 5%;">
+                          <h5 style="color: rgb(230, 75, 36);" >Short Summary</h5>
+                        <p style="font-family: cursive;">{{data.short_summary}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="jumbotron" style="background-color: rgb(103, 213, 233); margin-left: 5%">
+                        <h3>The Basics </h3><hr/>
+                        <div class="container-fluid">
+                          <div class="col-md-7">
+                            <ul class="list-group">
+                            <li class="list-group-item list-group-item-success">Commission</li><br/>
+                            <li class="list-group-item list-group-item-danger">Commission details</li><br/>
+                            <li class="list-group-item list-group-item-success">Our industry</li><br/>
+                            <li class="list-group-item list-group-item-info">Target industries</li><br/>
+                            <li class="list-group-item list-group-item-primary">Territories</li><br/>
+                            <li class="list-group-item list-group-item-info">Selling method</li><br/>
+                            <li class="list-group-item list-group-item-success">Minimum sales experience required</li><br/>
+                            <li class="list-group-item list-group-item-danger">Industry experience required</li>
+                          </ul>
+                          </div>
+                            <div class="col-md-5">
+                              <ul class="list-group">
+                              <li class="list-group-item list-group-item-success">{{financialtc.commission}}</li><br/>
+                              <li class="list-group-item list-group-item-danger">{{financialtc.commission_details}}</li><br/>
+                              <li class="list-group-item list-group-item-success">{{financialtc.our_industry}}</li><br/>
+                              <li class="list-group-item list-group-item-info">{{financialtc.target_industories}}</li><br/>
+                              <li class="list-group-item list-group-item-primary">{{financialtc.territories}}</li><br/>
+                              <li class="list-group-item list-group-item-info">{{financialtc.selling_method}}</li><br/>
+                              <li class="list-group-item list-group-item-success">{{financialtc.min_sales_experience_req}}</li><br/>
+                              <li class="list-group-item list-group-item-danger">{{financialtc.industry_exp_req}}</li>
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-md-12">
+                        <div class="jumbotron" style="background-color: rgb(216, 156, 128);margin-left: 5%;">
+                        <h3>Details</h3><hr/>
+                        <div class="container-fluid">
+                          <div class="col-md-7">
+                            <ul class="list-group">
+                            <li class="list-group-item list-group-item-success">Leads provided</li><br/>
+                            <li class="list-group-item list-group-item-danger">Average deal value:</li><br/>
+                            <li class="list-group-item list-group-item-success">Repeat customer spend:</li><br/>
+                            <li class="list-group-item list-group-item-info">Exclusive territory available</li><br/>
+                            <li class="list-group-item list-group-item-primary">Average sales cycle</li><br/>
+                            <li class="list-group-item list-group-item-info">Payment terms</li><br/>
+                            <li class="list-group-item list-group-item-success">Customer type</li><br/>
+                            <li class="list-group-item list-group-item-danger">Products & Services</li>
+                          </ul>
+                          </div>
+                            <div class="col-md-5">
+                              <ul class="list-group">
+                              <li class="list-group-item list-group-item-success">{{financialtc.leads_provided}}</li><br/>
+                              <li class="list-group-item list-group-item-danger">{{financialtc.avg_deal_value}}</li><br/>
+                              <li class="list-group-item list-group-item-success">{{financialtc.repeat_cast_spend}}</li><br/>
+                              <li class="list-group-item list-group-item-info">{{financialtc.exclusive_territory_avil}}</li><br/>
+                              <li class="list-group-item list-group-item-primary">{{financialtc.avg_sales_cycle}}</li><br/>
+                              <li class="list-group-item list-group-item-info">{{financialtc.payments_terms}}</li><br/>
+                              <li class="list-group-item list-group-item-success">{{financialtc.customer_type}}  </li><br/>
+                              <li class="list-group-item list-group-item-danger">{{financialtc.product_and_services}}</li>
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+              <iframe title="vimeo-player" src="https://www.youtube.com/embed/y8dBDCc-cjk " width="100%" height="400" frameborder="0"></iframe><br/><br/><br/>
+              <h5 style="color: rgb(21, 161, 115); font-family: cursive;" >About the company:</h5>
+              <img src= "{{ data.upload_logo.url }}" alt="pic" height="100" width="100" >
+              <p style="font-family: cursive;">{{data.about_your_comp}}</p>
+
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" >Apply Now</button>
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myask" >Ask Question</button>
+                            <div id="myModal" class="modal" role="dialog">
+                              <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <h4 class="modal-title">Applying To:-<b class="text-info"style="font-family: cursive;">{{financialtc.title}}</b></h4><br/><br/>
+                                    <p style="font-family: cursive;">When you apply to work on an opportunity, a link to your profile will be sent to the company, from where they will be able to get in touch if they think you're a good fit. But applications are more likely to succeed if they're accompanied by a direct message or cover letter, so you can compose that below. If the company has set up any custom questions for candidates, make sure you answer them here as well.
+                                    </p>
+                                    <form action="{% url 'agentapply' %}" method="POST">
+                                      {% csrf_token %}
+                                      <input type="text" class="form-control" id="comid" value="{{data.id}}" name="comid" hidden>
+                                    <div class="form-group">
+                                      <label for="apply">Cover Letter:</label>
+                                      <textarea type="text" class="form-control" id="apply" rows="10" name="letter" required></textarea>
+                                    </div>
+                                  <div class="form-group">
+                                    <label for="que">Questions:</label>
+                                    <p style="font-family: cursive;">Have you used Google Workspace before? If not, have you used Google Colloboration Tools (Docs, Slides, Sheets, Forms) as a consumer?</p>
+                                    <input type="text" class="form-control" id="que"  name="que" required>
+                                  </div>
+                                </div>                        
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-success">Send</button>
+                                  </div>
+                                </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                                <!-- <h2>Large Modal</h2> -->
+                                <!-- Trigger the modal with a button -->
+                                <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Large Modal</button> -->
+                              
+                                <!-- Modal -->
+                                <div id="myask" class="modal" role="dialog">
+                                  <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <form action="/ask/" method="POST">
+                                          {% csrf_token %}
+                                          <input type="text" class="form-control" id="comid" value="{{data.id}}" name="comid" hidden>
+                                          <div class="form-group">
+                                            <label for="que">Subject Line:</label>
+                                            <input type="text" class="form-control" id="que"  name="que" required>
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="apply">Discriptions:</label>
+                                            <textarea type="text" class="form-control" id="desc" rows="10" name="desc" required></textarea>
+                                          </div>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success" >send</button>
+                                      </div>
+                                    </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>   
+                           <div class="container-fluid">
+                            <div class="row">
+                              <div class="col-md-8">
+                                  <div class="jumbotron" style="background-color: rgb(224, 217, 208);margin-left: 5%;">
+                                  <h3 style="color: brown" >About the opportunity</h3><br/>
+                                  <p style="font-family: cursive;">{{financialtc.about_the_opportunity}}</p>
+                                <span class="card-body"><br/>
+                                  <h3 style="color: brown">Why should self-employed sales professionals consider working with this company</h3>
+                                  <p style="font-family: cursive;">{{financialtc.why_self_employed_working_comp}}</p>
+                                </span>
+                                <span class="card-body"><br/>
+                                  <h3 style="color: brown">What kind of self-employed sales professional is best suited to this opportunity?</h3>
+                                  <p style="font-family: cursive;">{{financialtc.about_the_opportunity}}</p>
+                                </span>
+                                <span class="card-body"><br/>
+                                  <h3 style="color: brown">Training and support</h3>
+                                  <p style="font-family: cursive;">{{financialtc.training_support}}</p>
+                                </span>
+                                  </div> 
+                              </div>
+                           </div> 
+                      </div>    
+{% endblock %}

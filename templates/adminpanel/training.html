@@ -1,0 +1,32 @@
+{% extends 'adminpanel/base.html' %}
+{% load static %}
+{% block content %}
+<div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-header-primary">
+              <h4 class="card-title ">Training</h4>
+              <p class="card-category"> Here is a subtitle for this table</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="container pt-5">
+              {% for obj in obj%}
+              <div class="row">
+                <div class="col-md-6">
+                  <iframe width="560" height="315" src="{{obj.video_link}}" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+              </div>
+              <div class="col-md-6 text-center">
+                <div class="card bg-info text-white">
+                  <div class="card-body">{{obj.title}}</div>                      
+                </div>
+                <p style="font-size: large; font-family: cursive;"><strong>{{obj.discription}}</strong></p>
+              </div>
+          </div><hr/>
+          {% endfor %}
+          </div>
+        {% endblock %}

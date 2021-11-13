@@ -1,0 +1,232 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <article class="entry entry-single">
+
+              <div class="entry-img">
+                <img src="{% static 'assets/img/insight/women.jpg' %}" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="{% url 'blog1' %}">How Women Are Transforming the Workspace</a>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="{% url 'blog1' %}">By connect195</a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="{% url 'blog1' %}"><time datetime="2020-08-29">August 29, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-comment"></i> <a href="{% url 'blog1' %}">0 Comments</a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+                <p>
+                    In the last few years, the world has witnessed the rise of women to top leadership positions in companies all around the globe. Various studies show that having more women in the top management can be beneficial for the company’s growth and profits. And many companies have implemented this learning and are making tremendous progress on gender diversity at the workplace. This is truly an important step in the right direction. 
+                </p>
+                <p>
+                    Still, though this victory is worth celebrating, women continue to be underrepresented at various levels and to change these numbers, companies need to focus on breaking the “glass ceiling” that prevents women from reaching out for senior leadership position
+                </p>
+                <p>
+                    This is where a company’s work culture plays a really important role. When all employees feel respected and are given an equal opportunity to grow and advance, a more diverse workforce is promoted which naturally leads to a more inclusive culture. In such a workplace, the company’s culture feels fair and inclusive and thus, underrepresented groups and women feel more connected to their jobs and thus are more likely to thrive!
+                </p>
+                <img src="{% static 'assets/img/insight/blog4/1.jpg' %}" class="img-fluid" alt="">
+                <br/>
+                <br/>
+                <p>
+                    And when it comes to leadership, research now suggests that companies with women executives at the helm tend to perform better than those led by men! Quantopian, a Boston-based trading platform based on crowdsourced algorithms, pitted the performance of Fortune 1000 companies that had women CEOs between 2002 and 2014 against the S&P 500’s performance during that same period. The comparison showed that the 80 women CEOs during those 12 years produced equity returns 226% better than the S&P 500! 
+                </p>
+                
+                <blockquote>
+                  <i class="icofont-quote-left quote-left"></i>
+                  <p>
+                    “We need to reshape our own perception of how we view ourselves. We have to step up as women and take the lead.”
+                  </p>
+                  <i class="las la-quote-right quote-right"></i>
+                  <i class="icofont-quote-right quote-right"></i>
+                </blockquote>
+                <p>
+                  <h3>So, what are the reasons that make women awesome leaders? </h3><br/>
+                  <ol>
+                    <li>
+                      <strong>They’re great listeners</strong><br/>
+                      Learning how to be a good listener is an essential life skill that most women have mastered. Today’s society is such that if a woman is outspoken, she is often typecast as ‘bossy’ or ‘shrill’. And if she doesn’t voice her opinions, she is labelled as ‘timid’. So women are constantly having to prove themselves, and in order to do that, they have to listen closely and speak when they must. This enables them to not just become great listeners but also develops people-reading skills which is one of the factors that make women successful leaders.
+                      <br/><br/>
+                    </li>
+                    <li>
+                      <strong>They’re expert multi-taskers</strong><br/>
+                      Women have to juggle a lot. From balancing their personal and professional lives, to meeting deadlines and ensuring work runs smoothly, women are masters of multi-tasking. 
+                      Ask any mom what her best quality is and multi-tasking will probably be high on her list! This quality comes in very handy when women have to manage and balance a strenuous work schedule along with managing their personal lives. Women have, since time immemorial, excelled at wearing many hats, not just in their personal lives but their professional lives as well. 
+                      <br/><br/>
+                    </li>
+                    <li>
+                      <strong>They’re cool in crisis situations </strong><br/>
+                      Women know how to handle crisis situations with a cool and calm head. That’s because they are so often juggling responsibilities and solving problems in their professional and personal lives simultaneously, that last minute problems or crisis situations don’t rattle them as easily as they do others. This makes women the perfect candidates to have around during crisis situations. They will not just remain cool and collected but also, immediately start looking for a possible solution. Their solution-oriented nature helps to get things done even under pressure, thereby adding to their skills of great leadership.
+                      <br/><br/><br/>
+                    </li>
+                    <li>
+                      <strong>They’re high on emotional intelligence</strong><br/>
+                      Various traditionally associated characteristics with women such as empathy, nurturing and communication are also associated with having high emotional intelligence. This ability to relate to others and form connections has recently become one of the most desirable traits in a leader. Though leaders were earlier expected to be calculated, strategic and decisive, nowadays, companies look for charismatic leaders who have the ability to understand people. Since women have the innate ability to communicate, they excel at forming bonds and nurturing their work relationships to the fullest, thereby contributing to their successful leadership careers.
+                      <br/><br/><br/>
+                    </li>
+                    <li>
+                      <strong>They value work-life balance</strong><br/>
+                      In most scenarios, women have to manage the responsibilities of a household along with excelling in their careers, they tend to highly value their work-life balance. This particular value is something that everyone in their team can benefit from. Since studies have frequently suggested that workplaces that emphasize the importance of work-life balance are healthier and happier, women prove to be great leaders because they know the importance of having a work-life balance and are constantly trying to achieve that for themselves and their teams.
+                      <br/>
+                      A Harvard Business Review reports that when an organization’s executives are at least 30 percent female, it leads to 15 percent gains in profitability and can be beneficial for recruiting and retention! Thus, working to ensure that your organization has women in executive roles can offer more advantages to your organization than simply diversity.  But one must actively work to remove barriers for aspiring female executives which will in turn, help improve the profitability and position of your organization as an attractive employer for top female talent!
+                      <br/><br/><br/>
+                    </li>
+                  </ol>
+                </p>
+
+              </div>
+
+              <div class="entry-footer clearfix">
+                <div class="float-left">
+                  <i class="icofont-folder"></i>
+                  <ul class="cats">
+                    <li><a href="{% url 'blog4' %}">Business</a></li>
+                  </ul>
+
+                  <i class="icofont-tags"></i>
+                  <ul class="tags">
+                    <li><a href="{% url 'blog4' %}">In India</a></li>
+                    <li><a href="{% url 'blog4' %}">India</a></li>
+                    <li><a href="{% url 'blog4' %}">Make in India</a></li>
+                    <li><a href="{% url 'blog4' %}">Investment</a></li>
+                  </ul>
+                </div>
+
+                <div class="float-right share">
+                  <a href="" title="Share on Twitter"><i class="icofont-twitter"></i></a>
+                  <a href="" title="Share on Facebook"><i class="icofont-facebook"></i></a>
+                  <a href="" title="Share on Instagram"><i class="icofont-instagram"></i></a>
+                </div>
+
+              </div>
+
+            </article><!-- End blog entry -->
+
+            <div class="blog-author clearfix">
+              <img src="{% static 'assets/img/insight/blog1/writer.jpg' %}" class="rounded-circle float-left" alt="">
+              <h4>Connect195</h4>
+              <div class="social-links">
+                <a href="https://twitters.com/#"><i class="icofont-twitter"></i></a>
+                <a href="https://facebook.com/#"><i class="icofont-facebook"></i></a>
+                <a href="https://instagram.com/#"><i class="icofont-instagram"></i></a>
+              </div>
+            </div><!-- End blog author bio -->
+
+            <div class="blog-comments">
+
+              <h4 class="comments-count">0 Comments</h4>
+
+              <!-- <div id="comment-1" class="comment clearfix">
+                <img src="assets/img/comments-1.jpg" class="comment-img  float-left" alt="">
+                <h5><a href="">Georgia Reader</a> <a href="#" class="reply"><i class="icofont-reply"></i> Reply</a></h5>
+                <time datetime="2020-01-01">01 Jan, 2020</time>
+                <p>
+                </p>
+
+              </div>End comment #1 -->
+            
+              <div class="reply-form">
+                <h4>Leave a Reply</h4>
+                <p>Your email address will not be published. Required fields are marked * </p>
+                <form action="">
+                  <div class="row">
+                    <div class="col-md-6 form-group">
+                      <input name="name" type="text" class="form-control" placeholder="Your Name*">
+                    </div>
+                    <div class="col-md-6 form-group">
+                      <input name="email" type="text" class="form-control" placeholder="Your Email*">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <input name="website" type="text" class="form-control" placeholder="Your Website">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <textarea name="comment" class="form-control" placeholder="Your Comment*"></textarea>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Post Comment</button>
+
+                </form>
+
+              </div>
+            </div><!-- End blog comments -->
+          </div><!-- End blog entries list -->
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+
+              <h3 class="sidebar-title">Search</h3>
+              <div class="sidebar-item search-form">
+                <form action="">
+                  <input type="text">
+                  <button type="submit"><i class="icofont-search"></i></button>
+                </form>
+
+              </div><!-- End sidebar search formn-->
+
+              <h3 class="sidebar-title">Recent Posts</h3>
+              <div class="sidebar-item recent-posts">
+                <div class="post-item clearfix">
+                  <img src="{% static 'assets/img/insight/namkeen.jpg' %}" alt="">
+                  <h4><a href="{% url 'blog2' %}">How to start Namkeen Business?</a></h4>
+                  <time datetime="2020-08-29">August 29, 2020</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="{% static 'assets/img/insight/ipo.jpg' %}" alt="">
+                  <h4><a href="{% url 'blog3' %}">Pre IPO Investment.</a></h4>
+                  <time datetime="2020-08-29">August 29, 2020</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="{% static 'assets/img/insight/women.jpg' %}" alt="">
+                  <h4><a href="{% url 'blog1' %}">WHY FOREIGNER SHOULD DO BUSINESS IN INDIA?</a></h4>
+                  <time datetime="2020-08-29">August 29, 2020</time>
+                </div>
+
+              </div><!-- End sidebar recent posts-->
+
+              <h3 class="sidebar-title">Tags</h3>
+              <div class="sidebar-item tags">
+                <ul>
+                  <li><a href="#">App</a></li>
+                  <li><a href="#">IT</a></li>
+                  <li><a href="#">Business</a></li>
+                  <li><a href="#">Business</a></li>
+                  <li><a href="#">Mac</a></li>
+                  <li><a href="#">Design</a></li>
+                  <li><a href="#">Office</a></li>
+                  <li><a href="#">Creative</a></li>
+                  <li><a href="#">Studio</a></li>
+                  <li><a href="#">Smart</a></li>
+                  <li><a href="#">Tips</a></li>
+                  <li><a href="#">Marketing</a></li>
+                </ul>
+
+              </div><!-- End sidebar tags-->
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+        </div>
+      </div>
+    </section><!-- End Blog Section -->
+
+  </main><!-- End #main -->
+
+  {% endblock %}

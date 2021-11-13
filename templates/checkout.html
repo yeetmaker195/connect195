@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Amount ======= -->
+    <section id="amount" class="amount">
+      <div class="container">  
+        <div><h3 style="color:#d9232d;">Total Amount: <sup>&#8377;</sup><span id="result" style="font-size:xxx-large;"> </span></h3></div>
+        <script>
+          document.getElementById("result").innerHTML =  localStorage.getItem("price");
+        </script>
+      </div>
+    </section><!-- End Amount -->
+
+    <!-- ======= Payment ======= -->
+    <section id="payment" class="payment">
+      <div class="container">  
+        <div class="row">        
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-toggle="tab" href="#tab-1">Debit Card</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tab-2">Net-Banking</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tab-3">Paypal</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <div style="max-width:400px;margin:auto"> 
+                      <div class="input-icons"> 
+                        <form>
+                          <i class="fa fa-user icon"></i> 
+                          <input type="text" name="name" class="form-control" id="name" placeholder="Name on Your Card" data-rule="minlen:4" data-msg="Please enter Correct Name" style="padding-left: 8%;"/>
+                          <i class="fa fa-credit-card icon"></i> 
+                          <input type="text" name="card_number" class="form-control" id="card_number" placeholder="Your Card Number" data-rule="minlen:4" data-msg="Please enter the 16 digit number on your card" style="padding-left: 8%;"/>
+                          <i class="fa fa-calendar icon"></i> 
+                          <input type="text" name="valid_till" class="form-control" id="valid_till" placeholder="valid till" data-rule="minlen:4" data-msg="Please enter the correct date." style="padding-left: 8%;" />
+                          <i class="fa fa-credit-card icon"></i> 
+                          <input type="text" name="cvv" class="form-control" id="cvv" placeholder="Your cvv Number" data-rule="minlen:4" data-msg="Please Enter three digit CVV Number" style="padding-left: 8%;"/>
+                        </form>
+                        <div>
+                          <br/>
+                          <a href="#" style="padding-left:85%;font-size: larger;text-decoration: underline;">submit</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/payment/card.gif' %}" alt="" style="width: 175%;">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <div class="radio-btns">
+                      <div class="row">
+                        <div class=	"col-md-6">
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Andhra Bank</label> </div></div>
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Allahabad Bank</label> </div></div>
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Bank of Baroda</label> </div></div>
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Canara Bank</label> </div></div>	
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>IDBI Bank</label> </div></div>
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Icici Bank</label> </div></div>	
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Indian Overseas Bank</label> </div></div>	
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Punjab National Bank</label> </div></div>	
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>South Indian Bank</label> </div></div>
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>State Bank Of India</label> </div></div>									  
+                        </div>
+                        <div class=	"col-md-6">
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>City Union Bank</label> </div></div>
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>HDFC Bank</label> </div></div>
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>IndusInd Bank</label> </div></div>
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Syndicate Bank</label> </div></div>
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Deutsche Bank</label> </div></div>	
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Corporation Bank</label> </div></div>
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>UCO Bank</label> </div></div>	
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Indian Bank</label> </div></div>	
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Federal Bank</label> </div></div>	
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>ING Vysya Bank</label> </div></div>
+                        </div>							
+                      </div>
+                    </div>
+                    <div>
+                      <br/>
+                      <a href="#" style="padding-left: 65%;font-size: larger;text-decoration: underline;">Continue</a>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/payment/netbanking.gif' %}" alt="" style="width:180%">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <div style="max-width:400px;margin:auto"> 
+                      <div class="input-icons"> 
+                        <form>
+                          <i class="fa fa-envelope icon"></i> 
+                          <input type="text" name="paypal_id" class="form-control" id="paypal_id" placeholder="Enter Your PayPal ID" data-rule="minlen:4" data-msg="Please enter valid ID" style="padding-left: 8%;"/>
+                          <i class="fa fa-key icon"></i> 
+                          <input type="text" name="password" class="form-control" id="password" placeholder="Enter Your Paypal Password" data-rule="minlen:4" data-msg="Please enter valid Password" style="padding-left: 8%;"/>
+                        </form>
+                      </div>
+                    </div>
+                    <div>
+                      <br/>
+                      <a href="#" style="padding-left: 78%;font-size: larger;text-decoration: underline;">Login</a>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/payment/paypal.gif' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+      </div>
+    </section>
+
+    {% endblock %}
+    

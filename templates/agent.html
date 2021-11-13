@@ -1,0 +1,231 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container">
+        <div class="container"><br/><br/>
+          <iframe width="1080" height="500" src="https://www.youtube.com/embed/y8dBDCc-cjk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+          <section id="services" class="services">
+            <div class="container">
+        
+              <div class="section-title">
+                <h2 style="color:red;">Service</h2>
+                <p>What we offer-</p>
+              </div>
+              <h3>The only platform that provides <b><u style="color:red;">all in one sales</u></b> Solutions</h3>
+              <p>The easiest way for companies and sales freelancers to connect and manage successful</p>
+        
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="icon-box">
+                    <i class="icofont-computer"></i>
+                    <h4><a href="#">Connect</a></h4>
+                    <p>Our team of expert help you to build website and mobile application to reach more customers.</p>
+                  </div>
+                </div>
+                <div class="col-md-6 mt-4 mt-md-0">
+                  <div class="icon-box">
+                    <i class="icofont-chart-bar-graph"></i>
+                    <h4><a href="#">Manage</a></h4>
+                    <p>We help that how to start your business. Provide all kind of basic support to starting a business. Our expert start helping you from basic steps.</p>
+                  </div>
+                </div>
+                <div class="col-md-6 mt-4 mt-md-0">
+                  <div class="icon-box">
+                    <i class="icofont-calculator"></i>
+                    <h4><a href="#">Collaborate</a></h4>
+                    <p>We provide professional support to complete all kind of accounting and compliance's work. Our connected CA firms support entrepreneurs all over India.</p>
+                  </div>
+                </div>
+                <div class="col-md-6 mt-4 mt-md-0">
+                  <div class="icon-box">
+                    <i class="icofont-lawyer"></i>
+                    <h4><a href="#">Sales Pipeline</a></h4>
+                    <p>We help you to get free legal advisory with a team of corporate lawyers.</p>
+                  </div>
+                </div>
+                <div class="col-md-6 mt-4 mt-md-0">
+                  <div class="icon-box">
+                    <i class="icofont-tasks"></i>
+                    <h4><a href="#">Training</a></h4>
+                    <p>we help entrepreneur and their team to grow, we provide training to all of them.</p>
+                  </div>
+                </div>
+                <div class="col-md-6 mt-4 mt-md-0">
+                  <div class="icon-box">
+                    <i class="icofont-tasks"></i>
+                    <h4><a href="#">Performance Tracking</a></h4>
+                    <p>Provide consultancy to Company to launch their IPO. help them to raise funding.</p>
+                  </div>
+                </div>
+                <div class="col-md-6 mt-4 mt-md-0">
+                  <div class="icon-box">
+                    <i class="icofont-money"></i>
+                    <h4><a href="#">Payment</a></h4>
+                    <p>we help entrepreneur and their team to grow, we provide training to all of them.</p>
+                  </div>
+                </div>
+                <div class="col-md-6 mt-4 mt-md-0">
+                  <div class="icon-box">
+                    <i class="icofont-support"></i>
+                    <h4><a href="#">Support</a></h4>
+                    <p>Provide consultancy to Company to launch their IPO. help them to raise funding.</p>
+                  </div>
+                </div>
+              </div>
+        
+            </div>
+
+        <div class="row">
+
+          <div class="col-lg-6  col-md-6 d-flex align-items-stretch">
+            <article class="entry">
+
+              <div class="entry-img">
+                <img src="{% static 'assets/img/insight/projects.jpg' %}" alt="" style="width: -webkit-fill-available;">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="{% url 'blog1' %}" style="color:seagreen"><b>Find the perfect projects for you:-</b></a>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="{% url 'blog1' %}">By connect195</a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="{% url 'blog1' %}"><time datetime="2020-08-29">August 29, 2020</time></a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+                <p>
+                  As a salespartner, our system matches you to the most suitable projects based on your profile and abilities. You can filter search for projects manually. 
+                  Find projects that match your skill and ability then submit a compelling proposal to win the project.
+                </p>
+                <!-- <div class="read-more">
+                  <a href="{% url 'blog1' %}">Read More</a>
+                </div> -->
+              </div>
+
+            </article><!-- End blog entry -->
+          </div>
+          <div class="col-lg-6  col-md-6 d-flex align-items-stretch">
+            <article class="entry">
+
+              <div class="entry-img">
+                <img src="{% static 'assets/img/insight/invoice1.jpg' %}" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="{% url 'blog2' %}" style="color:seagreen"><b>Invoicing:-</b></a>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="{% url 'blog2' %}">By connect195</a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="{% url 'blog2' %}"><time datetime="2020-08-29">August 29, 2020</time></a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+                <p>
+                  Once you’ve completed a project, effortlessly raise an invoice directly from the system. 
+                  You decide if you’re ready to invoice the full amount or enter your own values. 
+                  Your client is notified instantly and once they authorise payment funds are moved from the project’s protected escrow account into your system account.
+                </p>
+                <!-- <div class="read-more">
+                  <a href="{% url 'blog2' %}">Read More</a>
+                </div> -->
+              </div>
+
+            </article><!-- End blog entry -->
+          </div>
+          <div class="col-lg-6  col-md-6 d-flex align-items-stretch">
+            <article class="entry">
+
+              <div class="entry-img">
+                <img src="{% static 'assets/img/insight/sales partner.jpg' %}" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="{% url 'blog3' %}" style="color:seagreen"><b>sales partners:-</b></a>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="{% url 'blog3' %}">By connect195</a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="{% url 'blog3' %}"><time datetime="2020-08-29">August 29, 2020</time></a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+                <p>Complete an online application to join the exclusive sales partners community. 
+                    Every application is reviewed and approved by our moderation team, ensuring only the best sales partners are matched to client projects.
+                </p>
+                <p>Once approved, you’ll gain access to a stream of projects from our international client community.
+                    Build profile</p>
+                    <p>Personalise your profile by sharing your career experience, define your skills and tell your own story. 
+                      Show examples of your work in your portfolio, be descriptive and keep your profile up-to-date.
+                    </p>
+                <!-- <div class="read-more">
+                  <a href="{% url 'blog3' %}">Read More</a>
+                </div> -->
+              </div>
+
+            </article><!-- End blog entry -->
+          </div>
+          <div class="col-lg-6  col-md-6 d-flex align-items-stretch">
+            <article class="entry">
+
+              <div class="entry-img">
+                <img src="{% static 'assets/img/insight/communicate.jpg' %}" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="{% url 'blog4' %}" style="color:seagreen"><b>communication:-</b></a>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="{% url 'blog4' %}">By connect195</a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="{% url 'blog4' %}"><time datetime="2020-08-29">August 29, 2020</time></a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+                <p>
+                    System allows interaction between client and sales partners.  If you have questions – ask them, if you have suggestions – make them 
+                </p>
+                    <h5><u>Provide quality experience:-</u></h5>
+                    <p>Your client reviews you at the end of every project on the quality of their experience. 
+                        Sales partners who are consistently rated highly benefit from higher rankings, increased visibility and greater success on the platform.</p>
+                <!-- <div class="read-more">
+                  <a href="{% url 'blog4' %}">Read More</a>
+                </div> -->
+              </div>
+
+            </article><!-- End blog entry -->
+          </div>
+        </div>
+
+        <div class="blog-pagination" data-aos="fade-up">
+          <ul class="justify-content-center">
+            <li class="disabled"><i class="icofont-rounded-left"></i></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#"><i class="icofont-rounded-right"></i></a></li>
+          </ul>
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Services Section ======= -->
+ 
+  </section><!-- End Services Section -->
+  
+  </div>
+</div>
+  {% endblock %}
